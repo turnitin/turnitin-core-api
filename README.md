@@ -1,2 +1,2 @@
 # turnitin-core-api
-Turnitin Core API is used for integrating Turnitin's similarity workflow into your service
+Turnitin provides RESTful APIs to support third party integration with our market-leading originality check services.
