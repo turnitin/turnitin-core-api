@@ -29,36 +29,36 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.223
+  version: 1.0.225
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
 servers:
-- url: https://{tenantName}.turnitin.com/api/v1
-  variables:
-    tenantName:
-      default: app-us
-      description: Customer tenant name
+  - url: https://{tenantName}.turnitin.com/api/v1
+    variables:
+      tenantName:
+        default: app-us
+        description: Customer tenant name
 security:
-- api_key: []
+  - api_key: []
 tags:
-- name: Features
-  description: Get license and feature information
-- name: EULA
-  description: Manage acceptence of EULAs
-- name: Groups
-  description: Template exclusion
-- name: Submission
-  description: Upload files and retrieve data
-- name: Similarity
-  description: Schedule and receive similarity report details
-- name: Webhook
-  description: Create and manage Webhooks
+  - name: Features
+    description: Get license and feature information
+  - name: EULA
+    description: Manage acceptence of EULAs
+  - name: Groups
+    description: Used for template exclusion
+  - name: Submission
+    description: Upload files and retrieve data
+  - name: Similarity
+    description: Schedule and receive similarity report details
+  - name: Webhook
+    description: Create and manage Webhooks
 paths:
   /features-enabled:
     get:
       tags:
-      - Features
+        - Features
       summary: Get information about what features are allowed by the current license
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -90,7 +90,7 @@ paths:
   /eula/{version_id}:
     get:
       tags:
-      - EULA
+        - EULA
       summary: Gets information about a particular EULA version
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -111,8 +111,7 @@ paths:
           example: en-US
       responses:
         200:
-          description: Version data. A null value for valid_until indicates no expiration
-            of the EULA version
+          description: Version data. A null value for valid_until indicates no expiration of the EULA version
           content:
             application/json:
               schema:
@@ -140,7 +139,7 @@ paths:
   /eula/{version_id}/accept:
     post:
       tags:
-      - EULA
+        - EULA
       summary: Accepts a particular EULA version on behalf of an external user
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -190,9 +189,8 @@ paths:
   /eula/{version_id}/accept/{user_id}:
     get:
       tags:
-      - EULA
-      summary: Queries the acceptences of a particular EULA version on behalf of an
-        external user
+        - EULA
+      summary: Queries the acceptences of a particular EULA version on behalf of an external user
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
         - $ref: '#/components/parameters/IntegrationVersionHeader'
@@ -213,8 +211,7 @@ paths:
             type: string
       responses:
         200:
-          description: Array of EULA acceptence responses for the specified version
-            (one per language)
+          description: Array of EULA acceptence responses for the specified version (one per language)
           content:
             application/json:
               schema:
@@ -244,7 +241,7 @@ paths:
   /eula/{version_id}/view:
     get:
       tags:
-      - EULA
+        - EULA
       summary: Gets the text of a particular EULA version
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -294,7 +291,7 @@ paths:
     post:
       operationId: CreateSubmission
       tags:
-      - Submission
+        - Submission
       summary: Create a new Submission
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -390,7 +387,7 @@ paths:
     put:
       operationId: UploadSubmittedFile
       tags:
-      - Submission
+        - Submission
       summary: Upload Submitted File
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -439,8 +436,7 @@ paths:
               parameters:
                 id: '$request.body#/id'
         400:
-          description: Invalid submission file size, Submission file must be > than
-            0 MB and <= to 100 MB
+          description: Invalid submission file size, Submission file must be > than 0 MB and <= to 100 MB
           content:
             application/json:
               schema:
@@ -467,7 +463,7 @@ paths:
     get:
       operationId: GetSubmiddionDetails
       tags:
-      - Submission
+        - Submission
       summary: Get Submission Details
       parameters:
         - $ref: '#/components/parameters/IntegrationFamilyHeader'
@@ -509,25 +505,25 @@ paths:
     delete:
       operationId: DeleteSubmission
       tags:
-      - Submission
+        - Submission
       summary: Deletes a submission and associated similarity report.
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
-      - name: hard
-        in: query
-        description: |
-          Accepts true or false indicating either hard or soft delete. A soft delete removes the associated submission report/index and changes the saved submission state to DELETED. A hard deletion completely removes the submission information from Panda and TCA and removes the associated report/index, which can not be recovered.
-        schema:
-          type: string
-          default: "false"
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
+        - name: hard
+          in: query
+          description: |
+            Accepts true or false indicating either hard or soft delete. A soft delete removes the associated submission report/index and changes the saved submission state to DELETED. A hard deletion completely removes the submission information from Panda and TCA and removes the associated report/index, which can not be recovered.
+          schema:
+            type: string
+            default: "false"
       responses:
         200:
           description: |
@@ -555,18 +551,18 @@ paths:
     put:
       operationId: RecoverSubmission
       tags:
-      - Submission
+        - Submission
       summary: Recover a soft deleted submission
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully recovered Submission
@@ -598,18 +594,18 @@ paths:
     get:
       operationId: GetSimilarityReportResults
       tags:
-      - Similarity
+        - Similarity
       summary: Get Similarity Report Results
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully retrieved Similarity info
@@ -640,18 +636,18 @@ paths:
     put:
       operationId: RequestSimilarityReport
       tags:
-      - Similarity
+        - Similarity
       summary: Request Similarity Report generation
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -700,18 +696,18 @@ paths:
     post:
       operationId: GetSimilarityReportUrl
       tags:
-      - Similarity
+        - Similarity
       summary: Returns a URL to access Cloud Viewer
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -751,18 +747,18 @@ paths:
     post:
       operationId: RequestSimilarityReportPdf
       tags:
-      - Similarity
+        - Similarity
       summary: Request Pdf download and returns the Pdf Id
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: |
@@ -814,25 +810,25 @@ paths:
     get:
       operationId: DownloadSimilarityReportPdf
       tags:
-      - Similarity
+        - Similarity
       summary: GET download pdf
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
-      - name: pdf_id
-        in: path
-        description: |
-          The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
+        - name: pdf_id
+          in: path
+          description: |
+            The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: StreamingResponseBody, Pdf binary
@@ -858,8 +854,7 @@ paths:
           description: Submission not found for {id} or Pdf not found
           content: {}
         409:
-          description: A Similarity Report is already generating for this submission
-            or Failed to generate PDF
+          description: A Similarity Report is already generating for this submission or Failed to generate PDF
           content: {}
         429:
           description: |
@@ -879,25 +874,25 @@ paths:
     get:
       operationId: GetSimilarityReportPdfStatus
       tags:
-      - Similarity
+        - Similarity
       summary: GET pdf download status
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
-      - name: pdf_id
-        in: path
-        description: |
-          The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
+        - name: pdf_id
+          in: path
+          description: |
+            The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: |
@@ -923,8 +918,7 @@ paths:
           description: Submission not found for {id} or Pdf not found
           content: {}
         409:
-          description: A Similarity Report is already generating for this submission
-            or Failed to generate PDF
+          description: A Similarity Report is already generating for this submission or Failed to generate PDF
           content: {}
         429:
           description: |
@@ -944,18 +938,18 @@ paths:
     get:
       operationId: GetIndexStatus
       tags:
-      - Index
+        - Index
       summary: Return index state of submission
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Index state of submission
@@ -978,18 +972,18 @@ paths:
     put:
       operationId: IndexSubmission
       tags:
-      - Index
+        - Index
       summary: Index and return index state of submission
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        description: |
-          The Submission ID (returned upon a successful POST to /submissions)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          description: |
+            The Submission ID (returned upon a successful POST to /submissions)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully indexed submission
@@ -1020,11 +1014,11 @@ paths:
   /webhooks:
     get:
       tags:
-      - Webhook
+        - Webhook
       summary: List registered Webhook endpoints
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
       responses:
         200:
           description: Success
@@ -1050,11 +1044,11 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       tags:
-      - Webhook
+        - Webhook
       summary: Register a Webhook endpoint
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
       requestBody:
         content:
           application/json:
@@ -1152,9 +1146,9 @@ paths:
                           type: string
                           description: The requesting Pdf status
                           enum:
-                          - SUCCESS
-                          - PENDING
-                          - FAILED
+                            - SUCCESS
+                            - PENDING
+                            - FAILED
                         id:
                           type: string
                           description: the PDF ID
@@ -1224,16 +1218,16 @@ paths:
     get:
       operationId: GetWebhook
       tags:
-      - Webhook
+        - Webhook
       summary: Get Webhook endpoint info
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Success
@@ -1258,16 +1252,16 @@ paths:
     delete:
       operationId: DeleteWebhook
       tags:
-      - Webhook
+        - Webhook
       summary: Delete Webhook endpoint
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         204:
           description: Success
@@ -1289,16 +1283,16 @@ paths:
     patch:
       operationId: UpdateWebhook
       tags:
-      - Webhook
+        - Webhook
       summary: Update Webhook endpoint info
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -1331,17 +1325,17 @@ paths:
     get:
       operationId: GetGroup
       tags:
-      - Groups
+        - Groups
       summary: Get group, group context and group context owners info
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully get AggregateGroup
@@ -1357,17 +1351,17 @@ paths:
                 $ref: '#/components/schemas/Error'
     put:
       tags:
-      - Groups
+        - Groups
       summary: upsert group, group context and group context owners info
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -1376,8 +1370,7 @@ paths:
         required: true
       responses:
         200:
-          description: Successfully upssert group, group context and group context
-            owners
+          description: Successfully upssert group, group context and group context owners
           content:
             application/json:
               schema:
@@ -1422,17 +1415,17 @@ paths:
     get:
       operationId: GetGroupAttachments
       tags:
-      - Groups
+        - Groups
       summary: Get all attachments
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully get attachments
@@ -1454,17 +1447,17 @@ paths:
     post:
       operationId: AddGroupAttachment
       tags:
-      - Groups
+        - Groups
       summary: Add attachment to a group. will create a group if it does not exist.
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -1510,33 +1503,33 @@ paths:
     put:
       operationId: UploadGroupAttachment
       tags:
-      - Groups
+        - Groups
       summary: Upload Submitted File
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: |
-          The Group ID (required to already exist)
-        required: true
-        schema:
-          type: string
-      - name: attach_id
-        in: path
-        description: |
-          The attachment ID (returned from a successful group attachment request)
-        required: true
-        schema:
-          type: string
-      - name: Content-Disposition
-        in: header
-        description: |
-          *must include the "filename" parameter, e.g. `inline; filename="MyFile.docx"`
-        required: true
-        schema:
-          type: string
-          example: inline; filename="MyFile.docx"
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: |
+            The Group ID (required to already exist)
+          required: true
+          schema:
+            type: string
+        - name: attach_id
+          in: path
+          description: |
+            The attachment ID (returned from a successful group attachment request)
+          required: true
+          schema:
+            type: string
+        - name: Content-Disposition
+          in: header
+          description: |
+            *must include the "filename" parameter, e.g. `inline; filename="MyFile.docx"`
+          required: true
+          schema:
+            type: string
+            example: inline; filename="MyFile.docx"
       requestBody:
         description: the attachment file
         content:
@@ -1559,8 +1552,7 @@ paths:
               parameters:
                 id: 'request.body#/attach_id'
         400:
-          description: Invalid submission file size, Submission file must be > than
-            0 MB and <= to 100 MB
+          description: Invalid submission file size, Submission file must be > than 0 MB and <= to 100 MB
           content:
             application/json:
               schema:
@@ -1587,24 +1579,24 @@ paths:
     get:
       operationId: GetGroupAttachment
       tags:
-      - Groups
+        - Groups
       summary: Get group attachment
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
-      - name: attach_id
-        in: path
-        description: |
-          The attachment ID (returned from a successful group attachment request)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
+        - name: attach_id
+          in: path
+          description: |
+            The attachment ID (returned from a successful group attachment request)
+          required: true
+          schema:
+            type: string
       responses:
         200:
           description: Successfully get attachment
@@ -1621,24 +1613,24 @@ paths:
     delete:
       operationId: DeleteGroupAttachment
       tags:
-      - Groups
+        - Groups
       summary: Hard delete group attachment
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
-      - name: attach_id
-        in: path
-        description: |
-          The attachment ID (returned from a successful group attachment request)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
+        - name: attach_id
+          in: path
+          description: |
+            The attachment ID (returned from a successful group attachment request)
+          required: true
+          schema:
+            type: string
       responses:
         204:
           description: Attachment successfully deleted
@@ -1652,24 +1644,24 @@ paths:
     patch:
       operationId: UpdateGroupAttachment
       tags:
-      - Groups
+        - Groups
       summary: Patch a group attachment
       parameters:
-      - $ref: '#/components/parameters/IntegrationFamilyHeader'
-      - $ref: '#/components/parameters/IntegrationVersionHeader'
-      - name: group_id
-        in: path
-        description: group_id
-        required: true
-        schema:
-          type: string
-      - name: attach_id
-        in: path
-        description: |
-          The attachment ID (returned from a successful group attachment request)
-        required: true
-        schema:
-          type: string
+        - $ref: '#/components/parameters/IntegrationFamilyHeader'
+        - $ref: '#/components/parameters/IntegrationVersionHeader'
+        - name: group_id
+          in: path
+          description: group_id
+          required: true
+          schema:
+            type: string
+        - name: attach_id
+          in: path
+          description: |
+            The attachment ID (returned from a successful group attachment request)
+          required: true
+          schema:
+            type: string
       requestBody:
         content:
           application/json:
@@ -1701,8 +1693,7 @@ components:
           description: ID of the owning user
         owner_default_permission_set:
           type: string
-          description: Default viewer permission set, accepts INSTRUCTOR, LEARNER,
-            EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
+          description: Default viewer permission set, accepts INSTRUCTOR, LEARNER, EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
           enum:
             - INSTRUCTOR
             - LEARNER
@@ -1718,12 +1709,10 @@ components:
         submitter:
           maxLength: 132
           type: string
-          description: (optional) ID of the submitting user, if different from the
-            owning user
+          description: (optional) ID of the submitting user, if different from the owning user
         submitter_default_permission_set:
           type: string
-          description: Default submitter permission set, accepts INSTRUCTOR, LEARNER,
-            EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
+          description: Default submitter permission set, accepts INSTRUCTOR, LEARNER, EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
           enum:
             - INSTRUCTOR
             - LEARNER
@@ -1755,14 +1744,10 @@ components:
               type: string
               description: custom metadata
               example: '{"Hello": "data"}'
-          description: (optional) Submission metadata. If a group context is included,
-            it must be associated to a group
+          description: (optional) Submission metadata. If a group context is included, it must be associated to a group
         extract_text_only:
           type: boolean
-          description: (optional) indicates if the submission should be treated as
-            a text only submission. A text only submission cannot generate full reports
-            or be viewed in the viewer, but can use the index only endpoint to be
-            indexed
+          description: (optional) indicates if the submission should be treated as a text only submission. A text only submission cannot generate full reports or be viewed in the viewer, but can use the index only endpoint to be indexed
       description: |
         A Submission is the base object on which other services (such as similarity) are offered. In order to use other services a Submission must first be created and successfully process, then other service objects can be created.
     Group:
@@ -1777,8 +1762,8 @@ components:
         type:
           type: string
           enum:
-          - ASSIGNMENT
-          - FOLDER
+            - ASSIGNMENT
+            - FOLDER
     AggregateGroup:
       type: object
       properties:
@@ -1791,8 +1776,8 @@ components:
         type:
           type: string
           enum:
-          - ASSIGNMENT
-          - FOLDER
+            - ASSIGNMENT
+            - FOLDER
         group_context:
           $ref: '#/components/schemas/GroupContext'
         due_date:
@@ -1802,8 +1787,8 @@ components:
         report_generation:
           type: string
           enum:
-          - IMMEDIATELY
-          - IMMEDIATELY_AND_DUE_DATE
+            - IMMEDIATELY
+            - IMMEDIATELY_AND_DUE_DATE
     GroupContext:
       type: object
       properties:
@@ -1860,29 +1845,29 @@ components:
           items:
             type: string
             enum:
-            - ar-SA
-            - cs-CZ
-            - da-DK
-            - de-DE
-            - el-GR
-            - en-US
-            - es-MX
-            - fi-FI
-            - fr-FR
-            - it-IT
-            - ja-JP
-            - ko-KR
-            - nb-NO
-            - nl-NL
-            - pl-PL
-            - pt-BR
-            - ro-RO
-            - ru-RU
-            - sv-SE
-            - tr-TR
-            - vi-VN
-            - zh-CN
-            - zh-TW
+              - ar-SA
+              - cs-CZ
+              - da-DK
+              - de-DE
+              - el-GR
+              - en-US
+              - es-MX
+              - fi-FI
+              - fr-FR
+              - it-IT
+              - ja-JP
+              - ko-KR
+              - nb-NO
+              - nl-NL
+              - pl-PL
+              - pt-BR
+              - ro-RO
+              - ru-RU
+              - sv-SE
+              - tr-TR
+              - vi-VN
+              - zh-CN
+              - zh-TW
     EulaAcceptRequest:
       type: object
       properties:
@@ -1917,9 +1902,9 @@ components:
           items:
             type: string
             enum:
-            - Native
-            - CORE_API
-            - Draft Coach
+              - Native
+              - CORE_API
+              - Draft Coach
     EulaAcceptListItem:
       type: object
       properties:
@@ -1942,91 +1927,91 @@ components:
             The unique name of the EULA Version
     SimpleSubmissionResponse:
       allOf:
-      - type: object
-        properties:
-          id:
-            type: string
-            description: the unique ID of the submission
-          owner:
-            type: string
-            description: the owner of the submission
-          title:
-            type: string
-            description: the title of the submission
-          status:
-            type: string
-            description: the current status of the Submission
-            enum:
-            - CREATED
-            - PROCESSING
-            - COMPLETE
-          created_time:
-            type: string
-            description: |
-              RFC3339 timestamp of when this submission was initially created. This is the time at which the POST to /submissions was made.
-            format: date-time
+        - type: object
+          properties:
+            id:
+              type: string
+              description: the unique ID of the submission
+            owner:
+              type: string
+              description: the owner of the submission
+            title:
+              type: string
+              description: the title of the submission
+            status:
+              type: string
+              description: the current status of the Submission
+              enum:
+                - CREATED
+                - PROCESSING
+                - COMPLETE
+            created_time:
+              type: string
+              description: |
+                RFC3339 timestamp of when this submission was initially created. This is the time at which the POST to /submissions was made.
+              format: date-time
     Submission:
       allOf:
-      - type: object
-        properties:
-          owner:
-            type: string
-            description: the owner of the submission
-          title:
-            type: string
-            description: the title of the submission
-          status:
-            type: string
-            description: the current status of the Submission
-            enum:
-            - CREATED
-            - PROCESSING
-            - COMPLETED
-          id:
-            type: string
-            description: the unique ID of the submission
-          content_type:
-            type: string
-            description: the content type of the submission
-          page_count:
-            type: integer
-            description: the number of pages in the submission
-          word_count:
-            type: integer
-            description: the number of words in the submission
-          character_count:
-            type: integer
-            description: the number of characters in the submission
-          error_code:
-            type: string
-            description: |
-              an error code representing the type of error encountered (if applicable)
-            enum:
-            - UNSUPPORTED_FILETYPE
-            - PROCESSING_ERROR
-            - CANNOT_EXTRACT_TEXT
-            - TOO_LITTLE_TEXT
-            - TOO_MUCH_TEXT
-            - TOO_MANY_PAGES
-            - FILE_LOCKED
-            - CORRUPT_FILE
-          created_time:
-            type: string
-            description: |
-              RFC3339 timestamp of when this submission was initially created. This is the time at which the POST to /submissions was made.
-            format: date-time
-          capabilities:
-            type: array
-            description: Set of capabilities available to the current submission
-            items:
+        - type: object
+          properties:
+            owner:
               type: string
+              description: the owner of the submission
+            title:
+              type: string
+              description: the title of the submission
+            status:
+              type: string
+              description: the current status of the Submission
               enum:
-              - INDEX
-              - SIMILARITY
-              - VIEWER
+                - CREATED
+                - PROCESSING
+                - COMPLETED
+            id:
+              type: string
+              description: the unique ID of the submission
+            content_type:
+              type: string
+              description: the content type of the submission
+            page_count:
+              type: integer
+              description: the number of pages in the submission
+            word_count:
+              type: integer
+              description: the number of words in the submission
+            character_count:
+              type: integer
+              description: the number of characters in the submission
+            error_code:
+              type: string
+              description: |
+                an error code representing the type of error encountered (if applicable)
+              enum:
+                - UNSUPPORTED_FILETYPE
+                - PROCESSING_ERROR
+                - CANNOT_EXTRACT_TEXT
+                - TOO_LITTLE_TEXT
+                - TOO_MUCH_TEXT
+                - TOO_MANY_PAGES
+                - FILE_LOCKED
+                - CORRUPT_FILE
+            created_time:
+              type: string
+              description: |
+                RFC3339 timestamp of when this submission was initially created. This is the time at which the POST to /submissions was made.
+              format: date-time
+            capabilities:
+              type: array
+              description: Set of capabilities available to the current submission
+              items:
+                type: string
+                enum:
+                  - INDEX
+                  - SIMILARITY
+                  - VIEWER
     SimilarityPutRequest:
       required:
-      - generation_settings
+        - generation_settings
       type: object
       properties:
         indexing_settings:
@@ -2037,61 +2022,58 @@ components:
           $ref: '#/components/schemas/SimilarityViewSettings'
     SimilarityMetadata:
       allOf:
-      - $ref: '#/components/schemas/SimilarityScoreData'
-      - required:
-        - status
-        - submission_id
-        - time_generated
-        - time_requested
-        - top_matches
-        - top_source_largest_matched_word_count
-        type: object
-        properties:
-          submission_id:
-            type: string
-          status:
-            type: string
-            description: possible values PENDING, COMPLETE
-          time_generated:
-            type: string
-            description: Time the report finished generating.  If not set the report
-              has not finished generating
-          time_requested:
-            type: string
-            description: Time the report was requested
-          top_matches:
-            type: array
-            description: Top matches
-            items:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: Source name
-                percentage:
-                  type: number
-                  description: Match percentage
-                submission_id:
-                  type: string
-                  description: Matching submission id
-                source_type:
-                  type: string
-                  description: Matching submission source type (INTERNET, PUBLICATION,
-                    SUBMITTED_WORK)
-                matched_word_count_total:
-                  type: number
-                  description: number of matching words
-                submitted_date:
-                  type: string
-                  description: date match was submitted
-                institution_name:
-                  type: string
-                  description: intitution name for matched SUBMITTED_WORK types
-          top_source_largest_matched_word_count:
-            type: integer
-            description: Largest individual matched word count, 0 if there isn't a
-              match to this submission.
-            format: int32
+        - $ref: '#/components/schemas/SimilarityScoreData'
+        - required:
+            - status
+            - submission_id
+            - time_generated
+            - time_requested
+            - top_matches
+            - top_source_largest_matched_word_count
+          type: object
+          properties:
+            submission_id:
+              type: string
+            status:
+              type: string
+              description: possible values PENDING, COMPLETE
+            time_generated:
+              type: string
+              description: Time the report finished generating.  If not set the report has not finished generating
+            time_requested:
+              type: string
+              description: Time the report was requested
+            top_matches:
+              type: array
+              description: Top matches
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: Source name
+                  percentage:
+                    type: number
+                    description: Match percentage
+                  submission_id:
+                    type: string
+                    description: Matching submission id
+                  source_type:
+                    type: string
+                    description: Matching submission source type (INTERNET, PUBLICATION, SUBMITTED_WORK)
+                  matched_word_count_total:
+                    type: number
+                    description: number of matching words
+                  submitted_date:
+                    type: string
+                    description: date match was submitted
+                  institution_name:
+                    type: string
+                    description: intitution name for matched SUBMITTED_WORK types
+            top_source_largest_matched_word_count:
+              type: integer
+              description: Largest individual matched word count, 0 if there isn't a match to this submission.
+              format: int32
     SimilarityOverview:
       type: object
       properties:
@@ -2168,34 +2150,32 @@ components:
           description: viewer's user ID
         locale:
           type: string
-          description: two character locale language setting (e.g. 'en' or 'de') or
-            full value
+          description: two character locale language setting (e.g. 'en' or 'de') or full value
           enum:
-          - ar-SA
-          - cs-CZ
-          - de-DE
-          - el-GR
-          - en-US
-          - es-MX
-          - fi-FI
-          - fr-FR
-          - it-IT
-          - ja-JP
-          - ko-KR
-          - nl-NL
-          - pl-PL
-          - pt-BR
-          - ro-RO
-          - ru-RU
-          - sv-SE
-          - tr-TR
-          - vi-VN
-          - zh-CN
-          - zh-TW
+            - ar-SA
+            - cs-CZ
+            - de-DE
+            - el-GR
+            - en-US
+            - es-MX
+            - fi-FI
+            - fr-FR
+            - it-IT
+            - ja-JP
+            - ko-KR
+            - nl-NL
+            - pl-PL
+            - pt-BR
+            - ro-RO
+            - ru-RU
+            - sv-SE
+            - tr-TR
+            - vi-VN
+            - zh-CN
+            - zh-TW
         viewer_default_permission_set:
           type: string
-          description: Default viewer permission set, accepts INSTRUCTOR, LEARNER,
-            EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
+          description: Default viewer permission set, accepts INSTRUCTOR, LEARNER, EDITOR, USER, APPLICANT, ADMINISTRATOR, UNDEFINED
         viewer_permissions:
           $ref: '#/components/schemas/ViewerPermissions'
         eula:
@@ -2221,8 +2201,7 @@ components:
           properties:
             save_changes:
               type: boolean
-              description: Used to enable save changes in the Viewer and trigger SIMILARITY_UPDATED
-                webhook callback
+              description: Used to enable save changes in the Viewer and trigger SIMILARITY_UPDATED webhook callback
     Sidebar:
       type: object
       properties:
@@ -2231,40 +2210,34 @@ components:
           description: |
             The default mode shown in the sidebar panel. The selected mode must be enabled in the tenant's license, request parameter, as well as the viewer's permission. The default mode is similarity.
           enum:
-          - similarity
-          - flags
-          - documentDetails
-          - sections_exclusion
+            - similarity
+            - flags
+            - documentDetails
+            - sections_exclusion
     ViewerPermissions:
       type: object
       properties:
         may_view_submission_full_source:
           type: boolean
-          description: Optional individual permission which override the default permission
-            set.
+          description: Optional individual permission which override the default permission set.
         may_view_match_submission_info:
           type: boolean
-          description: Optional individual permission which override the default permission
-            set.
+          description: Optional individual permission which override the default permission set.
         may_view_flags_panel:
           type: boolean
-          description: Optional individual permission which override the default permission
-            set
+          description: Optional individual permission which override the default permission set
         may_view_document_details_panel:
           type: boolean
-          description: Optional individual permission which override the default permission
-            set
+          description: Optional individual permission which override the default permission set
         may_view_sections_exclusion_panel:
           type: boolean
-          description: Optional individual permission which override the default permission
-            set
+          description: Optional individual permission which override the default permission set
     SimilarityViewerUrlResponse:
       type: object
       properties:
         viewer_url:
           type: string
-          description: URL to be used to access Cloud Viewer visualization of similarity
-            report matches
+          description: URL to be used to access Cloud Viewer visualization of similarity report matches
           format: url
     RequestPdfResponse:
       type: object
@@ -2280,9 +2253,9 @@ components:
           type: string
           description: The requesting Pdf status
           enum:
-          - SUCCESS
-          - PENDING
-          - FAILED
+            - SUCCESS
+            - PENDING
+            - FAILED
     IndexStateSettings:
       type: object
       properties:
@@ -2292,33 +2265,33 @@ components:
             If true, is_indexed displays the index state of submission.
     WebhookWithSecret:
       allOf:
-      - required:
-        - signing_secret
-        type: object
-        properties:
-          signing_secret:
-            type: string
-            description: a sercret used to sign all callbacks for this webhook
-            format: binary
-      - $ref: '#/components/schemas/WebhookBase'
+        - required:
+            - signing_secret
+          type: object
+          properties:
+            signing_secret:
+              type: string
+              description: a sercret used to sign all callbacks for this webhook
+              format: binary
+        - $ref: '#/components/schemas/WebhookBase'
     Webhook:
       allOf:
-      - required:
-        - id
-        type: object
-        properties:
-          id:
-            type: string
-            description: unique id of webhook
-          created_time:
-            type: string
-            description: |
-              RFC3339  timestamp of when this Webhook was initially created. This is the time at which the POST to /webhooks was made.
-            format: date-time
-      - $ref: '#/components/schemas/WebhookBase'
+        - required:
+            - id
+          type: object
+          properties:
+            id:
+              type: string
+              description: unique id of webhook
+            created_time:
+              type: string
+              description: |
+                RFC3339  timestamp of when this Webhook was initially created. This is the time at which the POST to /webhooks was made.
+              format: date-time
+        - $ref: '#/components/schemas/WebhookBase'
     WebhookPathRequest:
       required:
-      - event_types
+        - event_types
       type: object
       properties:
         description:
@@ -2326,16 +2299,15 @@ components:
           description: a human readable description of the webhook
         event_types:
           type: array
-          description: an array of the types of callbacks that will be sent to this
-            webhook
+          description: an array of the types of callbacks that will be sent to this webhook
           items:
             type: string
             enum:
-            - SUBMISSION_COMPLETE
-            - SIMILARITY_COMPLETE
-            - SIMILARITY_UPDATED
-            - PDF_STATUS
-            - GROUP_ATTACHMENT_COMPLETE
+              - SUBMISSION_COMPLETE
+              - SIMILARITY_COMPLETE
+              - SIMILARITY_UPDATED
+              - PDF_STATUS
+              - GROUP_ATTACHMENT_COMPLETE
     AddGroupAttachmentRequest:
       type: object
       properties:
@@ -2373,11 +2345,11 @@ components:
           type: string
           description: status
           enum:
-          - CREATED
-          - PROCESSING
-          - COMPLETE
-          - ERROR
-          - DELETE
+            - CREATED
+            - PROCESSING
+            - COMPLETE
+            - ERROR
+            - DELETE
         template:
           type: boolean
           description: template
@@ -2391,14 +2363,13 @@ components:
         message:
           type: string
           description: A message explaining what happened
-      description: The generic object returned for errors. Updated for recent TCA
-        changes.
+      description: The generic object returned for errors. Updated for recent TCA changes.
     RateLimitError:
       allOf:
-      - $ref: '#/components/schemas/Error'
+        - $ref: '#/components/schemas/Error'
     SubmissionSizeError:
       allOf:
-      - $ref: '#/components/schemas/Error'
+        - $ref: '#/components/schemas/Error'
     SuccessMessage:
       type: object
       properties:
@@ -2420,8 +2391,7 @@ components:
       properties:
         require_eula:
           type: boolean
-          description: a flag indicating whether this tenant requires EULA checks
-            to use this API
+          description: a flag indicating whether this tenant requires EULA checks to use this API
     Eula:
       type: object
       properties:
@@ -2440,18 +2410,16 @@ components:
           description: |
             The unique name of the EULA Version
           example: latest
-      description: (optional) EULA acceptence information which either updates an
-        existing acceptence or creates a new acceptence
+      description: (optional) EULA acceptence information which either updates an existing acceptence or creates a new acceptence
     IndexingSettings:
       type: object
       properties:
         add_to_index:
           type: boolean
-          description: If set, the submission will be added to all valid node groups
-            for future matching
+          description: If set, the submission will be added to all valid node groups for future matching
     SimilarityGenerationSettings:
       required:
-      - search_repositories
+        - search_repositories
       type: object
       properties:
         search_repositories:
@@ -2460,31 +2428,32 @@ components:
           items:
             type: string
             enum:
-            - INTERNET
-            - PUBLICATION
-            - SUBMITTED_WORK
-            - PRIVATE
-            - CROSSREF
-            - CROSSREF_POSTED_CONTENT
+              - INTERNET
+              - PUBLICATION
+              - SUBMITTED_WORK
+              - PRIVATE
+              - CROSSREF
+              - CROSSREF_POSTED_CONTENT
         submission_auto_excludes:
           type: array
           description: List of submission IDs to exclude from report
           items:
             type: string
             format: uuid
+            example: 0dacc0d5-2deb-4564-97f9-726d89b6617f
         auto_exclude_self_matching_scope:
           type: string
           description: self matching submissions to exclude from report
           enum:
-          - ALL
-          - GROUP
-          - GROUP_CONTEXT
-          - NONE
+            - ALL
+            - GROUP
+            - GROUP_CONTEXT
+            - NONE
         priority:
           type: boolean
           description: Priority level of report generation
           enum:
-          - false
+            - false
     FeaturesSimilarityViewSettings:
       type: object
       properties:
@@ -2492,54 +2461,67 @@ components:
           type: boolean
           description: |
             If set to true, text in quotes will not count as similar content
+          example: true
         exclude_bibliography:
           type: boolean
           description: |
             If set to true, text in a bibliography section will not count as similar content
+          example: true
         exclude_citations:
           type: boolean
           description: |
             If set to true, text in citations will not count as similar content
+          example: true
         exclude_abstract:
           type: boolean
           description: |
             If set to true, text in the abstract section of the submission will not count as similar content
+          example: true
         exclude_methods:
           type: boolean
           description: |
             If set to true, text in the method section of the submission will not count as similar content
+          example: true
         exclude_small_matches:
           type: boolean
           description: |
             If set, similarity matches that match less than the specified amount of words will not count as similar content
+          example: true
         exclude_internet:
           type: boolean
           description: |
             If set to true, text matched to the internet collection will not count as similar content
+          example: true
         exclude_publications:
           type: boolean
           description: |
             If set to true, text matched to the publications collection will not count as similar content
+          example: true
         exclude_crossref:
           type: boolean
           description: |
             If set to true, text matched to the Crossref collection will not count as similar content
+          example: true
         exclude_crossref_posted_content:
           type: boolean
           description: |
             If set to true, text matched to the Crossref Posted Content collection will not count as similar content
+          example: true
         exclude_submitted_works:
           type: boolean
           description: |
             If set to true, text matched to the submitted works collection will not count as similar content calculated as if submitted work was not part of the paper
+          example: true
         exclude_custom_sections:
           type: boolean
           description: |
             If set to true, text matched to the custom sections defined in the admin settings will not count as similar content calculated as if section was not part of the paper
+          example: true
         exclude_preprints:
           type: boolean
           description: |
             If set to true, it will exclude preprints. A preprint is a version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal.
+          example: true
     SimilarityViewSettings:
       type: object
       properties:
@@ -2547,57 +2529,70 @@ components:
           type: boolean
           description: |
             If set to true, text in quotes will not count as similar content
+          example: true
         exclude_bibliography:
           type: boolean
           description: |
             If set to true, text in a bibliography section will not count as similar content
+          example: true
         exclude_citations:
           type: boolean
           description: |
             If set to true, text in citations will not count as similar content
+          example: true
         exclude_abstract:
           type: boolean
           description: |
             If set to true, text in the abstract section of the submission will not count as similar content
+          example: true
         exclude_methods:
           type: boolean
           description: |
             If set to true, text in the method section of the submission will not count as similar content
+          example: true
         exclude_small_matches:
           type: integer
           description: |
             If set, similarity matches that match less than the specified amount of words will not count as similar content
+          example: 4
         exclude_internet:
           type: boolean
           description: |
             If set to true, text matched to the internet collection will not count as similar content
+          example: true
         exclude_publications:
           type: boolean
           description: |
             If set to true, text matched to the publications collection will not count as similar content
+          example: true
         exclude_crossref:
           type: boolean
           description: |
             If set to true, text matched to the Crossref collection will not count as similar content
+          example: true
         exclude_crossref_posted_content:
           type: boolean
           description: |
             If set to true, text matched to the Crossref Posted Content collection will not count as similar content
+          example: true
         exclude_submitted_works:
           type: boolean
           description: |
             If set to true, text matched to the submitted works collection will not count as similar content calculated as if submitted work was not part of the paper
+          example: true
         exclude_custom_sections:
           type: boolean
           description: |
             If set to true, text matched to the custom sections defined in the admin settings will not count as similar content calculated as if section was not part of the paper
+          example: true
         exclude_preprints:
           type: boolean
           description: |
             If set to true, it will exclude preprints. A preprint is a version of a scholarly or scientific paper that precedes formal peer review and publication in a peer-reviewed scholarly or scientific journal.
+          example: true
     SimilarityScoreData:
       required:
-      - overall_match_percentage
+        - overall_match_percentage
       type: object
       properties:
         overall_match_percentage:
@@ -2630,8 +2625,8 @@ components:
           description: Family or last name of submission author
     WebhookBase:
       required:
-      - event_types
-      - url
+        - event_types
+        - url
       type: object
       properties:
         description:
@@ -2639,23 +2634,21 @@ components:
           description: a human readable description of the webhook
         url:
           type: string
-          description: the URL to callback with events, this must be https unless
-            (allow_insecure is true)
+          description: the URL to callback with events, this must be https unless (allow_insecure is true)
         allow_insecure:
           type: boolean
           description: if using an non https url, this must be set to true
         event_types:
           type: array
-          description: an array of the types of callbacks that will be sent to this
-            webhook
+          description: an array of the types of callbacks that will be sent to this webhook
           items:
             type: string
             enum:
-            - SUBMISSION_COMPLETE
-            - SIMILARITY_COMPLETE
-            - SIMILARITY_UPDATED
-            - PDF_STATUS
-            - GROUP_ATTACHMENT_COMPLETE
+              - SUBMISSION_COMPLETE
+              - SIMILARITY_COMPLETE
+              - SIMILARITY_UPDATED
+              - PDF_STATUS
+              - GROUP_ATTACHMENT_COMPLETE
     FeaturesViewerModes:
       type: object
       properties:
@@ -2672,12 +2665,12 @@ components:
           items:
             type: string
             enum:
-            - INTERNET
-            - PUBLICATION
-            - SUBMITTED_WORK
-            - PRIVATE
-            - CROSSREF
-            - CROSSREF_POSTED_CONTENT
+              - INTERNET
+              - PUBLICATION
+              - SUBMITTED_WORK
+              - PRIVATE
+              - CROSSREF
+              - CROSSREF_POSTED_CONTENT
         submission_auto_excludes:
           type: boolean
   responses:
@@ -2731,8 +2724,7 @@ components:
           schema:
             $ref: '#/components/schemas/SuccessMessage'
     SubmissionSizeErrorResponse:
-      description: Invalid submission file size, Submission file must be > than 0
-        MB and <= to 100 MB
+      description: Invalid submission file size, Submission file must be > than 0 MB and <= to 100 MB
       content:
         '*/*':
           schema:
@@ -2746,8 +2738,7 @@ components:
             $ref: '#/components/schemas/SuccessMessage'
   parameters:
     IntegrationFamilyHeader:
-      description: a human readable string representing the type of integration being
-        used
+      description: a human readable string representing the type of integration being used
       name: X-Turnitin-Integration-Name
       in: header
       example: myintegration
