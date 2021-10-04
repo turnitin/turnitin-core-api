@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.225
+  version: 1.0.226
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -2074,72 +2074,6 @@ components:
               type: integer
               description: Largest individual matched word count, 0 if there isn't a match to this submission.
               format: int32
-    SimilarityOverview:
-      type: object
-      properties:
-        submission_id:
-          type: string
-        overall_match_percentage:
-          type: number
-        submission_text:
-          type: string
-        match_aggregates:
-          type: array
-          items:
-            $ref: '#/components/schemas/SimilarityOverviewMatchAggregate'
-    SimilarityOverviewMatchAggregate:
-      type: object
-      properties:
-        source_type:
-          type: string
-        description:
-          type: string
-        percent:
-          type: number
-        aggregate_id:
-          type: string
-        match_sources:
-          type: array
-          items:
-            $ref: '#/components/schemas/SimilarityOverviewMatchSource'
-    SimilarityOverviewMatchSource:
-      type: object
-      properties:
-        source_type:
-          type: string
-        institution_name:
-          type: string
-        description:
-          type: string
-        download_date:
-          type: string
-        submitted_date:
-          type: string
-        link:
-          type: string
-        source_id:
-          type: string
-        submission_id:
-          type: string
-        percent:
-          type: number
-        visibility:
-          type: string
-        match_groups:
-          type: array
-          items:
-            $ref: '#/components/schemas/SimilarityOverviewMatchGroup'
-    SimilarityOverviewMatchGroup:
-      type: object
-      properties:
-        glimpse_id:
-          type: string
-        match_segments:
-          type: array
-          items:
-            type: array
-            items:
-              type: number
     SimilarityViewerUrlSettings:
       type: object
       properties:
