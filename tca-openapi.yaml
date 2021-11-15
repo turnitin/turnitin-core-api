@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.228
+  version: 1.0.230
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -2123,10 +2123,10 @@ components:
       properties:
         default_mode:
           type: string
-          description: default similarity mode when viewing a report; set to either match_overview or all_sources 
+          description: default similarity mode when viewing a report; set to either match_overview or all_sources
           enum:
-          - match_overview
-          - all_sources
+            - match_overview
+            - all_sources
         modes:
           type: object
           properties:
