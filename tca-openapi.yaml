@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.230
+  version: 1.0.238
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -2392,8 +2392,7 @@ components:
         priority:
           type: boolean
           description: Priority level of report generation
-          enum:
-            - false
+          example: false
     FeaturesSimilarityViewSettings:
       type: object
       properties:
