@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.238
+  version: 1.0.241
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -1687,6 +1687,9 @@ components:
     SubmissionBase:
       type: object
       properties:
+        id:
+          description: Submission id, optional field
+          format: uuid
         owner:
           maxLength: 132
           type: string
