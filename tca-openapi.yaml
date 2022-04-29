@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.241
+  version: 1.0.246
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -1905,9 +1905,9 @@ components:
           items:
             type: string
             enum:
-              - Native
+              - NATIVE
               - CORE_API
-              - Draft Coach
+              - DRAFT_COACH
     EulaAcceptListItem:
       type: object
       properties:
