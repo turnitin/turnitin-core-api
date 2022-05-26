@@ -1,7 +1,7 @@
 {
     "collection": {
         "info": {
-            "_postman_id": "d8341c75-abb8-464e-a293-46bfc8e140a4",
+            "_postman_id": "96dd13e7-c163-411e-a835-21a0e1e5fe09",
             "name": "Turnitin Core API",
             "description": "Turnitin Core API (TCA) provides direct API access to the core functionality provided by Turnitin. TCA supports file submission, similarity report generation, group management, and visualization of report matches via Cloud Viewer or PDF download.\nBelow is the full flow to successfully set up an integration scope, an API Key, and make calls to TCA. Integration Scope and API Key management is done via the Admin Console UI by logging in as an admin user. For more details, go to our [developer portal documentation page](https://developers.turnitin.com/docs).\n## Integration Scope and API Key Management\nTCA API calls must provide an API Key for authentication, so you must first have at least one integration scope associated with at least one API Key to use TCA.\n### Admin Console UI\nFirst, login to Admin Console UI as an *Admin* user with permission to create Integration Scopes, under a tenant that is licensed to use the TCA product\nIntegration Scopes (you can create a new one, or add keys to existing)\n\n  * Click `Integrations` in the side bar --> `+ Add Integration` at top the top of the page --> Enter a name --> `Add` Button\n  API Keys\n  * Click `Integrations` in the side bar --> `Create API Key` Button next to a given Integration Scope -->\n  Enter a name --> click `Create and View button`\n  * Copy/Save the key manually or click save to clipboard button to copy it (this is the only time it will show)\n\n## TCA Flow\n\n  *  Register a webhook\n  *  Create a submission\n  *  Upload a file for the submission\n  *  Wait for the submission upload to process\n     * If you registered a webhook, a callback will be sent to it when upload is complete\n     * The status of the *submission* will also update to `COMPLETE`\n  *  Request a Similarity Report\n  *  Wait for similarity report to process\n     * If you registered a webhook, a callback will be sent to it when report is complete\n     * The status of the *report* will also be updated to `COMPLETE`\n  *  Request a URL with parameters to view the Similarity Report\n",
             "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -15,7 +15,7 @@
                         "item": [
                             {
                                 "name": "Accepts a particular EULA version on behalf of an external user",
-                                "id": "e133ce4e-58d1-4b15-9b1c-9112d7396290",
+                                "id": "2aae0a13-5ba8-425a-841d-3d44feb23174",
                                 "protocolProfileBehavior": {
                                     "disableBodyPruning": true
                                 },
@@ -62,13 +62,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "34f93351-e434-45bb-a631-adb92fadbe38",
+                                                "id": "171baeca-08fd-40fe-aad7-f1db8762ce6e",
                                                 "key": "version_id",
                                                 "value": "<string>",
                                                 "description": "(Required) The EULA version ID (or `latest`)\n"
                                             },
                                             {
-                                                "id": "393a76df-48dc-4e33-b6b8-cd92ef249e97",
+                                                "id": "ac57141b-c3ad-484e-871a-55c88fc5a177",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -78,7 +78,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "348d520c-09a4-45e4-99d7-e3b9804ab25b",
+                                        "id": "56e008c8-5c67-4d4c-8b8e-a05819d3b8cd",
                                         "name": "A EULA acceptence response",
                                         "originalRequest": {
                                             "method": "POST",
@@ -143,10 +143,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"user_id\": \"sed ut pariatur quis\",\n  \"accepted_timestamp\": \"1991-12-13T08:20:40.109Z\",\n  \"language\": \"labore\",\n  \"version\": \"ad amet\"\n}"
+                                        "body": "{\n  \"user_id\": \"tempor\",\n  \"accepted_timestamp\": \"1970-08-30T22:40:53.922Z\",\n  \"language\": \"occaecat exer\",\n  \"version\": \"aliquip ut l\"\n}"
                                     },
                                     {
-                                        "id": "801931c1-3d7c-4dc2-a4c2-bffc49aeef1b",
+                                        "id": "541a734f-1375-484a-878b-dbdced3a40a8",
                                         "name": "Request is malformed or missing required data",
                                         "originalRequest": {
                                             "method": "POST",
@@ -214,7 +214,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "e44d7b31-279a-4e7c-8e50-a5db3c337c30",
+                                        "id": "0fdc6f04-6485-406e-aa8d-6708f659b9aa",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "POST",
@@ -282,7 +282,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "864b30e1-1598-42a1-807d-6d8bc6ba0e51",
+                                        "id": "7a8c6b61-9b86-45cb-8129-b92cc7ac35f5",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "POST",
@@ -347,10 +347,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "a0b62d53-121a-4de3-97b4-ba3868fa19c9",
+                                        "id": "f71c03c7-f109-48af-a537-cd086b9a2f14",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "POST",
@@ -415,13 +415,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Queries the acceptences of a particular EULA version on behalf of an external user",
-                                "id": "df43b518-04ae-4ed4-953a-60abbe3ac2ae",
+                                "id": "078949a6-6cc1-4b18-aa04-ae3384bb3307",
                                 "request": {
                                     "method": "GET",
                                     "header": [
@@ -453,19 +453,19 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "10daec1b-a21c-4f55-8824-9ba3a100a0f0",
+                                                "id": "03f5070f-9f40-46ff-bacf-33ee670fb429",
                                                 "key": "version_id",
                                                 "value": "<string>",
                                                 "description": "(Required) The EULA version ID (or `latest`)\n"
                                             },
                                             {
-                                                "id": "541d001a-8235-4237-ac1a-ca0657a1af66",
+                                                "id": "0aa326a8-198a-492f-9ab7-c22d41d604f8",
                                                 "key": "user_id",
                                                 "value": "<string>",
                                                 "description": "(Required) The user associated with the EULA status\n"
                                             },
                                             {
-                                                "id": "5f2fb887-0eb7-49ae-99ab-aa68517f2cce",
+                                                "id": "d6163ca1-b437-438b-82ee-c4086c40b484",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -475,7 +475,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "6ea6404a-a8b7-4314-8f9f-9dda78b934fb",
+                                        "id": "e72858f0-b643-4ec5-8e45-e330cacc612a",
                                         "name": "Array of EULA acceptence responses for the specified version (one per language)",
                                         "originalRequest": {
                                             "method": "GET",
@@ -537,10 +537,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "[\n  {\n    \"user_id\": \"id ea Lorem ut\",\n    \"accepted_timestamp\": \"2007-04-27T08:02:29.415Z\",\n    \"language\": \"sint pariatur laborum aliquip\",\n    \"version\": \"nisi nostrud aute\"\n  },\n  {\n    \"user_id\": \"dolor do consectetur\",\n    \"accepted_timestamp\": \"2013-09-26T19:17:52.046Z\",\n    \"language\": \"dolore eiusmod\",\n    \"version\": \"nostrud proident\"\n  }\n]"
+                                        "body": "[\n  {\n    \"user_id\": \"consectetur dolor sit\",\n    \"accepted_timestamp\": \"1952-07-23T10:26:16.016Z\",\n    \"language\": \"aliquip ut amet labore proident\",\n    \"version\": \"dolor quis\"\n  },\n  {\n    \"user_id\": \"Duis reprehenderit sit anim\",\n    \"accepted_timestamp\": \"1968-05-31T03:00:47.370Z\",\n    \"language\": \"Lorem nisi dolore minim\",\n    \"version\": \"enim reprehenderit eiusmod\"\n  }\n]"
                                     },
                                     {
-                                        "id": "6981be9e-2309-42b1-8b61-9699c0091b88",
+                                        "id": "fe39806e-1205-4753-a153-f83f1c6303b3",
                                         "name": "Request is malformed or missing required data",
                                         "originalRequest": {
                                             "method": "GET",
@@ -605,7 +605,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "74e6579e-2423-4b02-9704-f932b3219c31",
+                                        "id": "608044b3-1f21-4a12-8b8a-6922c95d0b11",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "GET",
@@ -670,7 +670,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "23bdf621-a1f9-480e-9b74-d3cb4e67a884",
+                                        "id": "7a6cddda-3657-4862-bbc4-22135688c164",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "GET",
@@ -732,10 +732,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "19922483-b885-4586-a460-77561634ba63",
+                                        "id": "d4c2f382-6547-481a-8bfd-b47e565df2a9",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "GET",
@@ -797,16 +797,16 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             }
                         ],
-                        "id": "93583178-e412-4ba2-9021-f6485df6954b"
+                        "id": "2e4a8032-064f-432c-8259-be373fc84204"
                     },
                     {
                         "name": "Gets information about a particular EULA version",
-                        "id": "521b1d6e-9308-4794-8cef-5cacfe81c2c1",
+                        "id": "7f146221-69be-440b-8d7f-d34ee09dc08b",
                         "request": {
                             "method": "GET",
                             "header": [
@@ -843,13 +843,13 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "de99dab6-4491-46f1-b92d-aa34651f7de6",
+                                        "id": "e5723b22-dce8-44e0-be7a-8c3d46acbf21",
                                         "key": "version_id",
                                         "value": "<string>",
                                         "description": "(Required) The EULA version ID (or `latest`)\n"
                                     },
                                     {
-                                        "id": "f11cba7f-481f-41c0-a6df-64c95eb4cd1a",
+                                        "id": "0b5358b4-5901-4a40-8ac3-71db16a35e43",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -859,7 +859,7 @@
                         },
                         "response": [
                             {
-                                "id": "d7428482-6dd8-465e-9afb-4dda6463f1c7",
+                                "id": "69d51f68-c783-420e-a43b-51115289b339",
                                 "name": "Version data. A null value for valid_until indicates no expiration of the EULA version",
                                 "originalRequest": {
                                     "method": "GET",
@@ -920,10 +920,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"version\": \"in anim consequat ipsum\",\n  \"valid_from\": \"1986-08-14T20:30:08.095Z\",\n  \"valid_until\": \"2016-06-16T10:36:29.263Z\",\n  \"url\": \"eni\",\n  \"available_languages\": [\n    \"tr-TR\",\n    \"da-DK\"\n  ]\n}"
+                                "body": "{\n  \"version\": \"consequat\",\n  \"valid_from\": \"1984-07-08T12:36:11.750Z\",\n  \"valid_until\": \"1958-03-10T18:25:18.200Z\",\n  \"url\": \"officia sed Lorem adipisicing exercitation\",\n  \"available_languages\": [\n    \"ru-RU\",\n    \"fr-FR\"\n  ]\n}"
                             },
                             {
-                                "id": "9a2e4256-8490-4e9c-83f3-74b518ef5ce8",
+                                "id": "50e0dbcc-4f64-4abe-bb74-50a264d86588",
                                 "name": "Request is malformed or missing required data",
                                 "originalRequest": {
                                     "method": "GET",
@@ -987,7 +987,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "aa6efead-b473-4dbf-87c2-9666ee3fb774",
+                                "id": "848beaae-0a0f-4a2f-92d2-fbc1da99e193",
                                 "name": "Not properly authenticated",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1051,7 +1051,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "f593bba0-fec4-4034-b0ef-a8a7c370345d",
+                                "id": "0b44ed65-1e6f-4d5e-8dca-54e5c82db9b3",
                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1112,10 +1112,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             },
                             {
-                                "id": "38c88438-0dc5-4d59-bdfa-7c4ca067be64",
+                                "id": "dd5a476a-7830-44d7-a8ad-4c23cd9ec3dc",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1176,13 +1176,13 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     },
                     {
                         "name": "Gets the text of a particular EULA version",
-                        "id": "9a49074a-bbc6-4247-b759-4579cee331ea",
+                        "id": "c76b14e4-046e-4049-ab6c-2961057a35a3",
                         "request": {
                             "method": "GET",
                             "header": [
@@ -1220,13 +1220,13 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "fd675fa5-5af0-419f-80c1-fd392e1ea884",
+                                        "id": "3bcb45b7-2b11-4ddf-b541-1307168d1086",
                                         "key": "version_id",
                                         "value": "<string>",
                                         "description": "(Required) The EULA version ID (or `latest`)\n"
                                     },
                                     {
-                                        "id": "6169ad98-e9f2-4c53-9651-8512775b62ba",
+                                        "id": "8ef0f6e5-d9c0-4e12-9328-241983a5ea2c",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -1236,7 +1236,7 @@
                         },
                         "response": [
                             {
-                                "id": "28c978b8-9701-4b03-b106-66667956db93",
+                                "id": "cd79caab-55b7-4d76-9da5-b61a9475ea61",
                                 "name": "HTML Text of the desired EULA version",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1298,10 +1298,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "cillum"
+                                "body": "commodo eu aute"
                             },
                             {
-                                "id": "681800cf-3811-482b-8beb-d41cb723b350",
+                                "id": "5d8d19e3-0641-4104-8fdb-fadd0a1b5824",
                                 "name": "Request is malformed or missing required data",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1366,7 +1366,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "deafa3ef-2c60-4cb2-abfd-b82b9c4bc37a",
+                                "id": "3a6f134c-a173-41d0-bc26-e5b8e59aca8a",
                                 "name": "Not properly authenticated",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1431,7 +1431,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "8bb95cc8-4718-4ef2-9340-36ceef0aa76e",
+                                "id": "b0ce36f1-ad21-413d-8c5f-7aa58b67249a",
                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1496,7 +1496,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "eca43d78-3972-4570-9223-791a2ce6082c",
+                                "id": "1a039907-a4c8-4780-b663-2445d015cfa1",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "GET",
@@ -1563,7 +1563,7 @@
                         ]
                     }
                 ],
-                "id": "32b05ac2-aeef-495b-923d-d857d2d6ce0e"
+                "id": "7f43c465-6204-4792-963f-aed89cbe4d91"
             },
             {
                 "name": "submissions",
@@ -1582,7 +1582,7 @@
                                                 "item": [
                                                     {
                                                         "name": "GET download pdf",
-                                                        "id": "78d46e1e-17f5-4f49-bbc0-2056c442c518",
+                                                        "id": "3139b7ef-a161-48e0-91fe-8684c928d3ac",
                                                         "request": {
                                                             "method": "GET",
                                                             "header": [
@@ -1615,19 +1615,19 @@
                                                                 ],
                                                                 "variable": [
                                                                     {
-                                                                        "id": "36bef46c-186c-4eed-b7ce-91e249fcea61",
+                                                                        "id": "559ec947-b408-4ee5-aae7-803f01985b13",
                                                                         "key": "id",
                                                                         "value": "<string>",
                                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                                     },
                                                                     {
-                                                                        "id": "11439e6d-5488-4051-ac6f-53cb0d109df9",
+                                                                        "id": "c90ceecd-2d23-43cf-9b23-2441bbf54c0f",
                                                                         "key": "pdf_id",
                                                                         "value": "<string>",
                                                                         "description": "(Required) The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)\n"
                                                                     },
                                                                     {
-                                                                        "id": "d8c650ed-f34d-4e6a-a536-b0ac99c45654",
+                                                                        "id": "4ab6bc9f-397e-4412-953d-3655aca0b7e4",
                                                                         "key": "tenantName",
                                                                         "value": "{{tenantName}}",
                                                                         "description": "Customer tenant name"
@@ -1637,7 +1637,7 @@
                                                         },
                                                         "response": [
                                                             {
-                                                                "id": "0fbc0268-4eb0-47a2-8f8c-d4c536d8843f",
+                                                                "id": "b4d53001-a781-4f3e-942f-9112afe1338a",
                                                                 "name": "StreamingResponseBody, Pdf binary",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -1700,10 +1700,10 @@
                                                                 ],
                                                                 "cookie": [],
                                                                 "responseTime": null,
-                                                                "body": "cillum"
+                                                                "body": "commodo eu aute"
                                                             },
                                                             {
-                                                                "id": "8c2a2a94-3a8b-4dbb-ab9e-bd80a9fc7064",
+                                                                "id": "91a041a9-2c95-4f42-b652-9dca8743b3cc",
                                                                 "name": "Status message indicating processing status for requested PDF\n",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -1769,7 +1769,7 @@
                                                                 "body": "{\n  \"status\": \"FAILED\"\n}"
                                                             },
                                                             {
-                                                                "id": "ae044906-bc23-412b-9676-d0e925003c25",
+                                                                "id": "6f658235-dda2-4301-aad8-600d512ce16a",
                                                                 "name": "Request is malformed or missing required data",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -1835,7 +1835,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "bb829838-233e-42aa-b54a-a52c4707d113",
+                                                                "id": "28f8823c-2aa8-4582-ab6d-b173d6102b8a",
                                                                 "name": "Not properly authenticated",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -1901,7 +1901,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "ce636d82-770e-460c-b87e-afca71e2bebf",
+                                                                "id": "74b1724f-cdc7-431d-8433-653b37f70472",
                                                                 "name": "Submission not found for {id} or Pdf not found",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -1967,7 +1967,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "4516f074-e643-4103-9e38-b21aced6e5db",
+                                                                "id": "ab00d519-e917-4ff7-9ff0-2a2d86f72d8d",
                                                                 "name": "A Similarity Report is already generating for this submission or Failed to generate PDF",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2033,7 +2033,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "00fa5c74-2b05-448e-ba25-9e0d8d3abcda",
+                                                                "id": "a2fcb372-683d-43be-a6c7-b4b0da061609",
                                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2096,10 +2096,10 @@
                                                                 ],
                                                                 "cookie": [],
                                                                 "responseTime": null,
-                                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                             },
                                                             {
-                                                                "id": "92c82ca0-9311-4bbc-bb42-213926c2c782",
+                                                                "id": "46862310-87db-4889-9ded-c7d81aeb1bf3",
                                                                 "name": "An Error Occurred",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2162,13 +2162,13 @@
                                                                 ],
                                                                 "cookie": [],
                                                                 "responseTime": null,
-                                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                             }
                                                         ]
                                                     },
                                                     {
                                                         "name": "GET pdf download status",
-                                                        "id": "37018d18-86f7-4862-a335-5e4b3a77da4e",
+                                                        "id": "c7c927c3-bc4f-4c85-8c6d-894824afdcd6",
                                                         "request": {
                                                             "method": "GET",
                                                             "header": [
@@ -2202,19 +2202,19 @@
                                                                 ],
                                                                 "variable": [
                                                                     {
-                                                                        "id": "8bea4ad9-07bf-4e87-996d-cee96a160d37",
+                                                                        "id": "0eab59d9-7d55-44e3-8b85-a513a3afbf49",
                                                                         "key": "id",
                                                                         "value": "<string>",
                                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                                     },
                                                                     {
-                                                                        "id": "fa37efcd-d329-4a97-903b-6cb5705eaa77",
+                                                                        "id": "1167ffd6-f4cb-4602-8194-5a42d11847aa",
                                                                         "key": "pdf_id",
                                                                         "value": "<string>",
                                                                         "description": "(Required) The Pdf ID (returned upon a successful POST to /submissions/{submission_id}/similarity/pdf)\n"
                                                                     },
                                                                     {
-                                                                        "id": "45e319a3-81cf-46fa-9bdd-cb65afdbe9d7",
+                                                                        "id": "d0aada5f-0e28-46e7-8959-5c68fd787e41",
                                                                         "key": "tenantName",
                                                                         "value": "{{tenantName}}",
                                                                         "description": "Customer tenant name"
@@ -2224,7 +2224,7 @@
                                                         },
                                                         "response": [
                                                             {
-                                                                "id": "175e8605-df02-49af-8825-3c973de63391",
+                                                                "id": "c0b02ccf-b404-427f-ae73-bf6368adccf3",
                                                                 "name": "Status message indicating processing status for requested PDF\n",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2291,7 +2291,7 @@
                                                                 "body": "{\n  \"status\": \"FAILED\"\n}"
                                                             },
                                                             {
-                                                                "id": "23787a5f-8469-445d-89f8-60603177b52e",
+                                                                "id": "d6bcd045-62e6-492c-9e34-3a9199682220",
                                                                 "name": "Status message indicating processing status for requested PDF\n",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2358,7 +2358,7 @@
                                                                 "body": "{\n  \"status\": \"FAILED\"\n}"
                                                             },
                                                             {
-                                                                "id": "63d5ec41-3cf0-4991-8e1e-cdaef20aa027",
+                                                                "id": "4c8c025c-d4c8-490e-8330-af44f00bdd8f",
                                                                 "name": "Request is malformed or missing required data",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2425,7 +2425,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "ca04d882-a363-4a83-b4d9-6ee1606db1b2",
+                                                                "id": "8ec4df4c-2754-4aa2-b522-0a8e7c25c5ea",
                                                                 "name": "Not properly authenticated",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2492,7 +2492,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "8656c40d-45c4-4741-a521-d45d80fbacfd",
+                                                                "id": "85aa04fc-609a-4c15-bacf-2be0228fba37",
                                                                 "name": "Submission not found for {id} or Pdf not found",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2559,7 +2559,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "4278e2fc-f39a-4af1-be4c-750b6ccff486",
+                                                                "id": "da4f3b07-c921-49ad-b154-b8cc3643f89f",
                                                                 "name": "A Similarity Report is already generating for this submission or Failed to generate PDF",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2626,7 +2626,7 @@
                                                                 "body": ""
                                                             },
                                                             {
-                                                                "id": "62d58636-a7fa-4b2c-8b8a-b35be6a944ab",
+                                                                "id": "1326f0be-b2ce-4932-8df0-f722a8a49b1c",
                                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2690,10 +2690,10 @@
                                                                 ],
                                                                 "cookie": [],
                                                                 "responseTime": null,
-                                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                             },
                                                             {
-                                                                "id": "d5a4aa49-1285-47c3-8ca7-f6b467534011",
+                                                                "id": "9765836c-6a2f-4a81-b9ac-e3c1d1e71f5f",
                                                                 "name": "An Error Occurred",
                                                                 "originalRequest": {
                                                                     "method": "GET",
@@ -2757,16 +2757,16 @@
                                                                 ],
                                                                 "cookie": [],
                                                                 "responseTime": null,
-                                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                             }
                                                         ]
                                                     }
                                                 ],
-                                                "id": "43572d1a-be55-40dd-9763-0a094caa4a84"
+                                                "id": "b6fb0369-f1d6-4904-882b-2f9ba568f5c5"
                                             },
                                             {
                                                 "name": "Request Pdf download and returns the Pdf Id",
-                                                "id": "9afbd12c-7b5a-4cee-8f07-5eda7413c9b6",
+                                                "id": "a7f34d78-6dcf-4287-b93e-000f7a259c5c",
                                                 "request": {
                                                     "method": "POST",
                                                     "header": [
@@ -2798,13 +2798,13 @@
                                                         ],
                                                         "variable": [
                                                             {
-                                                                "id": "19466f34-0891-420e-b629-fd571cb851f3",
+                                                                "id": "a7b2d9ce-0852-4d5b-b1ec-b529058cce23",
                                                                 "key": "id",
                                                                 "value": "<string>",
                                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                             },
                                                             {
-                                                                "id": "8ac74313-3143-43cd-88d6-e3b866ae7520",
+                                                                "id": "912c2c82-52a6-4ed0-be85-47e6a2f8ccf4",
                                                                 "key": "tenantName",
                                                                 "value": "{{tenantName}}",
                                                                 "description": "Customer tenant name"
@@ -2814,7 +2814,7 @@
                                                 },
                                                 "response": [
                                                     {
-                                                        "id": "474b6986-b95e-44e1-8419-e5282038246b",
+                                                        "id": "973d69b7-1c40-4fe8-a230-4402b07e84a5",
                                                         "name": "Success message indicating ID for the PDF generation request\n",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -2871,10 +2871,10 @@
                                                         ],
                                                         "cookie": [],
                                                         "responseTime": null,
-                                                        "body": "{\n  \"id\": \"urn:uuid:735e64e3-647f-4c2d-08c7-3a44320829a7\"\n}"
+                                                        "body": "{\n  \"id\": \"7e961ce4-4f1b-8008-f277-b25a7c214e7b\"\n}"
                                                     },
                                                     {
-                                                        "id": "08b59b09-478e-4bd7-8d98-683143218cfd",
+                                                        "id": "b2d5cb3a-b478-4cf4-940c-c93e13d2a281",
                                                         "name": "Request is malformed or missing required data",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -2934,7 +2934,7 @@
                                                         "body": ""
                                                     },
                                                     {
-                                                        "id": "eda4220b-39ff-4fbb-9703-318f862bfca9",
+                                                        "id": "8ccb9531-f57b-4319-be5b-48d7cb2897f1",
                                                         "name": "Not properly authenticated",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -2994,7 +2994,7 @@
                                                         "body": ""
                                                     },
                                                     {
-                                                        "id": "b99230ee-a336-42c2-806a-53824900c7eb",
+                                                        "id": "4d9b1e27-b197-47bc-ad7d-fe4321e2cdd7",
                                                         "name": "Submission not found for {id}",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -3054,7 +3054,7 @@
                                                         "body": ""
                                                     },
                                                     {
-                                                        "id": "0b71e11a-bbe3-400b-ae73-59ba1e456bdb",
+                                                        "id": "f388e8e9-a8ed-4400-9515-da9e416b8e63",
                                                         "name": "A Similarity Report is already generating for this submission",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -3114,7 +3114,7 @@
                                                         "body": ""
                                                     },
                                                     {
-                                                        "id": "6a91e5b9-29df-4616-b6ce-e4c327a00cf3",
+                                                        "id": "e219e098-32f7-49cd-8e0f-c7acea1dc2d0",
                                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -3171,10 +3171,10 @@
                                                         ],
                                                         "cookie": [],
                                                         "responseTime": null,
-                                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                     },
                                                     {
-                                                        "id": "2791636a-675c-4ba5-a1fb-23308dcdbd40",
+                                                        "id": "15b3cf3e-9cd9-47e5-ac7e-9a61ad6c57f8",
                                                         "name": "An Error Occurred",
                                                         "originalRequest": {
                                                             "method": "POST",
@@ -3231,16 +3231,16 @@
                                                         ],
                                                         "cookie": [],
                                                         "responseTime": null,
-                                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                                     }
                                                 ]
                                             }
                                         ],
-                                        "id": "c14cfa06-aa7b-4d03-b099-86cbcce47e3b"
+                                        "id": "2d3fe4bd-d5ea-45bd-be2e-8a56177de9a6"
                                     },
                                     {
                                         "name": "Get Similarity Report Results",
-                                        "id": "69c5fb5e-b9f9-4bba-bad7-447afd5dba9c",
+                                        "id": "4dee23f6-8602-4960-b82a-b3c679a1f097",
                                         "request": {
                                             "method": "GET",
                                             "header": [
@@ -3271,13 +3271,13 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "b4a6301f-eeaa-47b1-aebb-0dc36a6072d7",
+                                                        "id": "997c89cc-6d5f-428c-b3b2-822430dbcbd0",
                                                         "key": "id",
                                                         "value": "<string>",
                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                     },
                                                     {
-                                                        "id": "1618bf73-f878-4797-b121-209c1a9eb0f1",
+                                                        "id": "1e55ce6d-7592-4116-adce-05af34b07750",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -3287,7 +3287,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "98dbbdc0-e61c-441d-a971-39f3f9e69b34",
+                                                "id": "5f79a6ad-aaf3-4c78-b1a6-56d5355051d8",
                                                 "name": "Successfully retrieved Similarity info",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -3343,10 +3343,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"overall_match_percentage\": 97092142,\n  \"status\": \"aute\",\n  \"submission_id\": \"ullamco laboris elit\",\n  \"time_generated\": \"ex eu\",\n  \"time_requested\": \"Duis elit cupidatat\",\n  \"top_matches\": [\n    {\n      \"name\": \"commodo ex sunt incididunt\",\n      \"percentage\": 42949367.61823434,\n      \"submission_id\": \"reprehenderit ad occaecat dolor irure\",\n      \"source_type\": \"elit v\",\n      \"matched_word_count_total\": 75985121.89952618,\n      \"submitted_date\": \"ad ullamco dolor est Ut\",\n      \"institution_name\": \"velit occaecat laborum \"\n    },\n    {\n      \"name\": \"sit elit eu culpa voluptate\",\n      \"percentage\": 26194640.377757087,\n      \"submission_id\": \"pariatur\",\n      \"source_type\": \"sed\",\n      \"matched_word_count_total\": 47658232.94907391,\n      \"submitted_date\": \"nulla esse\",\n      \"institution_name\": \"sed deserunt qu\"\n    }\n  ],\n  \"top_source_largest_matched_word_count\": -33866543,\n  \"internet_match_percentage\": -12567147,\n  \"publication_match_percentage\": -59679945,\n  \"submitted_works_match_percentage\": -42511743\n}"
+                                                "body": "{\n  \"overall_match_percentage\": -58626708,\n  \"status\": \"qui velit\",\n  \"submission_id\": \"laboris dolore\",\n  \"time_generated\": \"nisi occaecat\",\n  \"time_requested\": \"commodo voluptate\",\n  \"top_matches\": [\n    {\n      \"name\": \"commodo Ut eu\",\n      \"percentage\": 634315.1686760634,\n      \"submission_id\": \"veniam Excepteur id Duis\",\n      \"source_type\": \"Duis\",\n      \"matched_word_count_total\": 54910068.66602844,\n      \"submitted_date\": \"occaecat est\",\n      \"institution_name\": \"laboris amet laborum i\"\n    },\n    {\n      \"name\": \"nulla\",\n      \"percentage\": 58675848.31719133,\n      \"submission_id\": \"fugiat\",\n      \"source_type\": \"sunt velit eu ut voluptate\",\n      \"matched_word_count_total\": 43780077.77283499,\n      \"submitted_date\": \"in fugiat culpa officia id\",\n      \"institution_name\": \"Lorem est dolor\"\n    }\n  ],\n  \"top_source_largest_matched_word_count\": 51674840,\n  \"internet_match_percentage\": -94955573,\n  \"publication_match_percentage\": -67183841,\n  \"submitted_works_match_percentage\": -1145472\n}"
                                             },
                                             {
-                                                "id": "e55c3512-6c5d-4a68-b511-ec5c41f61d97",
+                                                "id": "dbca1017-da9c-4311-928c-bf55ffeb87b8",
                                                 "name": "Request is malformed or missing required data",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -3405,7 +3405,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "dab99496-9ade-46c8-88d3-e7723d3079c7",
+                                                "id": "a96d37d3-2d1f-493e-bd40-4d7048299012",
                                                 "name": "Not properly authenticated",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -3464,7 +3464,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "dd78c609-4f70-48f8-a73b-2ceeeb5c1aa6",
+                                                "id": "5e9812c3-7046-4fd4-be89-d09bcd278b02",
                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -3520,10 +3520,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             },
                                             {
-                                                "id": "b82d8729-cad8-4938-8ec6-dc1f32a869d3",
+                                                "id": "c37629f1-1739-4ee8-ba4c-561dcf6d6f23",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -3579,13 +3579,13 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     },
                                     {
                                         "name": "Request Similarity Report generation",
-                                        "id": "b96e4af6-4169-450d-b4ef-cf166382c2cb",
+                                        "id": "ffeda609-3262-442c-8131-db09660f030f",
                                         "protocolProfileBehavior": {
                                             "disableBodyPruning": true
                                         },
@@ -3632,13 +3632,13 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "094cb561-318a-4fac-b7a8-2e444a6da41b",
+                                                        "id": "b70fd74e-96a0-49c1-aa47-c92b45c9184a",
                                                         "key": "id",
                                                         "value": "<string>",
                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                     },
                                                     {
-                                                        "id": "67591221-32e5-49a6-a1cf-808a060d50d7",
+                                                        "id": "0b3e1f07-df60-4cd6-941a-e73bf9ab709c",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -3648,7 +3648,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "5f1a74ea-4068-47cd-97a8-58165886b859",
+                                                "id": "344efebd-6bee-44eb-b831-accaec5cd026",
                                                 "name": "Success message indicating successful scheduling of Similarity Report generation\n",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -3713,10 +3713,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"message\": \"cupidatat culpa tempor non\"\n}"
+                                                "body": "{\n  \"message\": \"ipsum\"\n}"
                                             },
                                             {
-                                                "id": "eb00becb-56db-4216-b07e-ae9477f03c91",
+                                                "id": "1b22ae91-b35e-4c5d-9b0d-fc5a4e5a2db7",
                                                 "name": "Request is malformed or missing required data",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -3784,7 +3784,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "eac087be-ff81-4717-872b-a327088a4f11",
+                                                "id": "f8234706-d89c-4d62-af61-9d7609fbbaa2",
                                                 "name": "Not properly authenticated",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -3852,7 +3852,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "32377200-7502-453a-88d8-58208b40a3ae",
+                                                "id": "14b03816-eed2-4d19-b179-75e2fce92c4a",
                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -3917,10 +3917,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             },
                                             {
-                                                "id": "96339104-7ddb-4754-a57f-de60635b0acb",
+                                                "id": "c06c6e40-61e1-4edd-a29e-678a311c395c",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -3985,19 +3985,19 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     }
                                 ],
-                                "id": "951ccfff-0784-445a-b459-25c7cbb2fc44"
+                                "id": "a72a63b9-cf12-4a91-a0b6-c0432c04944d"
                             },
                             {
                                 "name": "index",
                                 "item": [
                                     {
                                         "name": "Return index state of submission",
-                                        "id": "f69ff9eb-4d6d-42b9-b9bb-73b550d9cf3f",
+                                        "id": "12142750-b28a-4737-a2b0-9dd6cd18e412",
                                         "request": {
                                             "method": "GET",
                                             "header": [
@@ -4028,13 +4028,13 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "6efeddca-a17b-4338-ae3a-119fcdb3d413",
+                                                        "id": "b8b33466-a880-4211-ab92-d98ecca0fdfc",
                                                         "key": "id",
                                                         "value": "<string>",
                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                     },
                                                     {
-                                                        "id": "61961de3-917e-4e55-ac3b-e12391488bd6",
+                                                        "id": "d54cebcc-9021-4bd4-9982-9f4d8dd4f630",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -4044,7 +4044,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "5a8f8e23-222f-4402-a8ce-0ae00291c815",
+                                                "id": "94965a99-f248-4636-b836-f62a05b90ade",
                                                 "name": "Index state of submission",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -4103,7 +4103,7 @@
                                                 "body": "{\n  \"is_indexed\": true\n}"
                                             },
                                             {
-                                                "id": "3047dd6b-0ea6-4373-bc7e-72b4f4309e7b",
+                                                "id": "994eb677-670d-4cb0-b51e-2eed69b2598a",
                                                 "name": "Request is malformed or missing required data",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -4162,7 +4162,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "9b7d718c-abee-4706-b4a6-f32c083e7752",
+                                                "id": "2cd81e49-dc0d-4a82-8bb9-fb50cecaf857",
                                                 "name": "Submission has not been completed yet",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -4221,7 +4221,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "9f23777e-f26c-4f78-9cd4-993d3e80e17a",
+                                                "id": "c8435df6-cf57-43fc-9baa-f89b6b2dd627",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -4277,13 +4277,13 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     },
                                     {
                                         "name": "Index and return index state of submission",
-                                        "id": "340cb72f-72f0-4cd1-a6e3-ca4bfefaf145",
+                                        "id": "a0427798-e430-4e7d-9e1e-82d0ae420576",
                                         "request": {
                                             "method": "PUT",
                                             "header": [
@@ -4314,13 +4314,13 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "d7eb6adc-0472-40e4-906f-5ca717191a08",
+                                                        "id": "6c7017b7-87e6-4336-a1be-263363efc87a",
                                                         "key": "id",
                                                         "value": "<string>",
                                                         "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                                     },
                                                     {
-                                                        "id": "457c2541-d933-486b-a0e8-d4edbd8591cf",
+                                                        "id": "e64cbb22-584f-4350-b36e-028ebb04d791",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -4330,7 +4330,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "878f3861-881e-4fe8-9847-0e8f6e687713",
+                                                "id": "90dbf056-cb72-4639-ad90-f13d017d840f",
                                                 "name": "Successfully indexed submission",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -4389,7 +4389,7 @@
                                                 "body": "{\n  \"is_indexed\": true\n}"
                                             },
                                             {
-                                                "id": "a8b62c4e-1fd4-4161-9d10-38dbc1b6dfe8",
+                                                "id": "a33e73fb-c50e-4aa7-acbf-dee9dfdf9813",
                                                 "name": "Request is malformed or missing required data",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -4448,7 +4448,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "97fd5ceb-d0e3-4463-a8a6-5f316c461568",
+                                                "id": "1a13fd5a-ce90-4232-a10c-9340321123b8",
                                                 "name": "Not properly authenticated",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -4507,7 +4507,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "703df02c-0f22-4f91-a07c-299b8dbe73f7",
+                                                "id": "f9e2db60-9426-4b1f-ae9d-f947a7fb8004",
                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -4563,10 +4563,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             },
                                             {
-                                                "id": "ac4add51-221a-46b1-92d8-fb9b114bf733",
+                                                "id": "2626a949-b0e6-4f05-bf68-4ef09e74ed98",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -4622,16 +4622,16 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     }
                                 ],
-                                "id": "d8b71a88-4c13-4cb3-a434-a9d974454b14"
+                                "id": "68a31d73-a598-44c3-b4fb-c95d4bf119d4"
                             },
                             {
                                 "name": "Get Submission Details",
-                                "id": "2d3eca86-1e55-4c48-ae8e-5d9d5df64353",
+                                "id": "0ba11a48-e386-4db7-9628-f224fb565304",
                                 "request": {
                                     "method": "GET",
                                     "header": [
@@ -4661,13 +4661,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "08a19f30-6976-420b-88b3-73fcf0feb43d",
+                                                "id": "7ff423dc-f94a-408a-95ff-7c6100d3c79f",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                             },
                                             {
-                                                "id": "83972cb9-a8d2-47d4-8a76-da833c3c2064",
+                                                "id": "eb05ee80-2ab4-4642-b095-57511d703271",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -4677,7 +4677,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "c26df2b2-eaaf-40b6-8c9d-1c9df13ac58f",
+                                        "id": "6d4d9a45-2cb6-4100-99e8-f57dd6bf7bdc",
                                         "name": "Successfully retrieved Submission",
                                         "originalRequest": {
                                             "method": "GET",
@@ -4732,10 +4732,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"owner\": \"adipisicing in eu minim\",\n  \"title\": \"esse adipisicin\",\n  \"status\": \"PROCESSING\",\n  \"id\": \"consectetur tempor\",\n  \"content_type\": \"Excepteur Duis in est\",\n  \"page_count\": 28229836,\n  \"word_count\": 81541770,\n  \"character_count\": 3088193,\n  \"error_code\": \"CORRUPT_FILE\",\n  \"created_time\": \"1994-01-19T05:35:04.635Z\",\n  \"capabilities\": [\n    \"VIEWER\",\n    \"VIEWER\"\n  ]\n}"
+                                        "body": "{\n  \"owner\": \"et qui quis labore nisi\",\n  \"title\": \"consectetur veniam nisi\",\n  \"status\": \"DELETED\",\n  \"id\": \"exercitation cupidatat in\",\n  \"content_type\": \"laboris adipisicing id esse\",\n  \"page_count\": -23301732,\n  \"word_count\": -26429496,\n  \"character_count\": -89182706,\n  \"error_code\": \"CANNOT_EXTRACT_TEXT\",\n  \"created_time\": \"1984-11-18T12:08:07.279Z\",\n  \"capabilities\": [\n    \"VIEWER\",\n    \"INDEX\"\n  ]\n}"
                                     },
                                     {
-                                        "id": "13e697d2-0eb5-427e-936c-2ffcb4d8c0ce",
+                                        "id": "0de5c059-03a4-47f1-a80a-857185b9e811",
                                         "name": "Request is malformed or missing required data",
                                         "originalRequest": {
                                             "method": "GET",
@@ -4793,7 +4793,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "7bf19857-9bf5-415a-b554-6fecb0024238",
+                                        "id": "ffda587b-6bc4-49df-8be0-2c17cbc1c56a",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "GET",
@@ -4851,7 +4851,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "af64bbff-71b7-4671-9aa9-6d2c49f58ba4",
+                                        "id": "d8f85649-833c-4f4c-834a-bb13d1a0e763",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "GET",
@@ -4906,10 +4906,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "43230ddb-7cc0-4805-94bc-5f76219cafd6",
+                                        "id": "602904d6-9f7f-4bf5-8af2-9822f1117627",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "GET",
@@ -4964,13 +4964,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Deletes a submission and associated similarity report.",
-                                "id": "e358bdb5-9b7b-4219-a618-074df2c4243a",
+                                "id": "d5061c14-e32f-45f1-bc50-d2c233b3cfb2",
                                 "request": {
                                     "method": "DELETE",
                                     "header": [
@@ -5007,13 +5007,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "34d321f7-29bc-47ae-a62f-93667f8aec56",
+                                                "id": "3b29f235-d745-4b5e-bb63-3627684a3f0e",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                             },
                                             {
-                                                "id": "1c54c9da-86dc-4069-8d05-d702b9055ee5",
+                                                "id": "7d367118-b852-44f0-bf8d-3498c98d35d6",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -5023,7 +5023,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "a8913bda-bc0c-4445-ae45-e822c0c312fa",
+                                        "id": "ba79d897-c4be-440e-bae0-22f5fdf4d348",
                                         "name": "Success message indicating successful Delete request for a submission\n",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -5084,10 +5084,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"message\": \"cupidatat culpa tempor non\"\n}"
+                                        "body": "{\n  \"message\": \"ipsum\"\n}"
                                     },
                                     {
-                                        "id": "a4580f7f-1e86-4e67-a2a5-d430b50e9739",
+                                        "id": "5086a3fa-65e4-4b9d-89b8-321f4c62dce4",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -5151,7 +5151,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "632e11c9-ef3b-4bd2-a0a1-65d9534aa8ae",
+                                        "id": "0c84d539-a6f2-42c0-a573-b0a42d33aa1c",
                                         "name": "Submission not found for {id}",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -5215,7 +5215,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "62fefce0-b593-4145-a2de-44cc5282b33b",
+                                        "id": "70657111-1fde-4ccd-9959-aeebbf8e99e4",
                                         "name": "Deletion error",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -5279,7 +5279,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "749817b0-cf15-4664-a97c-0bd5165ee1c1",
+                                        "id": "4c1e4f8b-e3db-4b8d-be9f-72e79cf97dda",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -5340,13 +5340,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Upload Submitted File",
-                                "id": "fb7ca72e-cdea-42ee-9f8f-f4a73415f2e9",
+                                "id": "de054f60-2ed1-4fc9-96c3-b8537a58a1e7",
                                 "protocolProfileBehavior": {
                                     "disableBodyPruning": true
                                 },
@@ -5393,13 +5393,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "f0a18765-1258-4a92-a39d-4c4af3330415",
+                                                "id": "d72782a4-14e2-4582-aed5-5531a8246993",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                             },
                                             {
-                                                "id": "717c13f4-32d2-4db2-9fd5-9a0d9be55c41",
+                                                "id": "e2b4e724-4040-4dc8-b14c-f3bad2c17a8d",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -5409,7 +5409,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "c4c3d16f-ae7b-4e1a-9898-69cb1083e86b",
+                                        "id": "76f5f0b7-79cc-44a1-b467-2d2731e180fa",
                                         "name": "Success message indicating successful PUT request for a submission upload\n",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5432,7 +5432,7 @@
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
                                                     "key": "Content-Type",
-                                                    "value": "cillum"
+                                                    "value": "commodo eu aute"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5479,10 +5479,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"message\": \"cupidatat culpa tempor non\"\n}"
+                                        "body": "{\n  \"message\": \"ipsum\"\n}"
                                     },
                                     {
-                                        "id": "f5aebdbc-95b9-42d9-8389-1405f539271d",
+                                        "id": "32cb37bb-95e8-41b3-b4a6-9e23998850f1",
                                         "name": "Invalid submission file size, Submission file must be > than 0 MB and <= to 100 MB",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5505,7 +5505,7 @@
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
                                                     "key": "Content-Type",
-                                                    "value": "cillum"
+                                                    "value": "commodo eu aute"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5552,10 +5552,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "2508fc02-7e94-4599-91f1-3cc3ba13b347",
+                                        "id": "c798569c-2d92-4d6e-a061-837cd97f1ec3",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5578,7 +5578,7 @@
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
                                                     "key": "Content-Type",
-                                                    "value": "cillum"
+                                                    "value": "commodo eu aute"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5628,7 +5628,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "912673c3-76f8-41b3-b337-d65158ad0277",
+                                        "id": "9b0c2c02-f89c-4d52-af25-e2ca6968f501",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5651,7 +5651,7 @@
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
                                                     "key": "Content-Type",
-                                                    "value": "cillum"
+                                                    "value": "commodo eu aute"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5698,10 +5698,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "0c89c27a-4831-42a3-a58d-52cc80ba7e68",
+                                        "id": "0c0515ed-2096-435e-902a-1598bfeb825a",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5724,7 +5724,7 @@
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
                                                     "key": "Content-Type",
-                                                    "value": "cillum"
+                                                    "value": "commodo eu aute"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5771,13 +5771,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Recover a soft deleted submission",
-                                "id": "9e53f467-ee81-482e-bfb3-2ad79e0568b9",
+                                "id": "f942ec31-9bf8-40ba-9486-b16f01df2a72",
                                 "request": {
                                     "method": "PUT",
                                     "header": [
@@ -5808,13 +5808,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "f42ae8bb-df2f-4f36-9bd8-2c70bfcf7557",
+                                                "id": "84fd51f6-994d-4c8b-91c3-0185b880ad50",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                             },
                                             {
-                                                "id": "87f12fd9-d29e-4171-8b97-a970096e5f93",
+                                                "id": "2bc48d16-0fa0-479d-84ef-e6cc969df1f5",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -5824,7 +5824,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "72c87b34-b851-432a-bd91-ea9f10a0dd04",
+                                        "id": "f101ecb1-2104-4fab-90f8-8251dc8762df",
                                         "name": "Successfully recovered Submission",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5880,10 +5880,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"id\": \"adipisicing dolor\",\n  \"owner\": \"laboris\",\n  \"title\": \"dolor\",\n  \"status\": \"PROCESSING\",\n  \"created_time\": \"2013-06-08T14:26:20.863Z\"\n}"
+                                        "body": "{\n  \"id\": \"in dolore amet ea proident\",\n  \"owner\": \"sint nulla\",\n  \"title\": \"occaecat nulla \",\n  \"status\": \"PROCESSING\",\n  \"created_time\": \"1964-09-03T19:10:52.107Z\"\n}"
                                     },
                                     {
-                                        "id": "f3e0ea46-c9eb-422b-97d9-b47b11bbfe86",
+                                        "id": "45c41f02-9f15-40fc-9232-8d982b2b1546",
                                         "name": "Request is malformed or missing required data",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -5942,7 +5942,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "7204d9ee-ffc5-4494-94c7-be15f79c176c",
+                                        "id": "b6525a0d-91d4-46db-8517-074504b1221e",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -6001,7 +6001,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "b1cc224d-8aa0-4f9c-9109-f21ab6405f2d",
+                                        "id": "94e3ddc4-980a-4814-a4bc-b55547bdb419",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -6057,10 +6057,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "afd3a6a7-4016-4012-8126-ff50061864d9",
+                                        "id": "5d65d12a-ccf5-421f-9a9e-5625c9db92bd",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "PUT",
@@ -6116,13 +6116,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Returns a URL to access Cloud Viewer",
-                                "id": "1b4b6c8a-1971-4450-bc5f-972c55598cef",
+                                "id": "8b98cc0a-2b64-4580-8eb2-48db5cfad2df",
                                 "protocolProfileBehavior": {
                                     "disableBodyPruning": true
                                 },
@@ -6169,13 +6169,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "2416e85a-c2c7-437b-bde2-d165e19296f8",
+                                                "id": "7c39b427-e5c6-4288-acac-b47b9e870bbc",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) The Submission ID (returned upon a successful POST to /submissions)\n"
                                             },
                                             {
-                                                "id": "1cc9cfb2-029c-4021-97e1-8b7870130032",
+                                                "id": "ea6bb8e9-972d-429e-845b-da5d5a6f7f68",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -6185,7 +6185,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "4b5e8546-c617-4c9a-a194-7873a414bce9",
+                                        "id": "d86206a6-632a-461f-ac24-1ad15ae6d297",
                                         "name": "Success message indicating URL for launching similarity report\n",
                                         "originalRequest": {
                                             "method": "POST",
@@ -6250,10 +6250,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"viewer_url\": \"commodo\"\n}"
+                                        "body": "{\n  \"viewer_url\": \"am\"\n}"
                                     },
                                     {
-                                        "id": "78dbd5fb-b80b-400a-8b5e-4c276e9a6ecc",
+                                        "id": "7e91637a-74ae-4b74-8751-a7aee2b2176e",
                                         "name": "Request is malformed or missing required data",
                                         "originalRequest": {
                                             "method": "POST",
@@ -6321,7 +6321,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "ec72a650-0ec1-4a21-81c6-6ffa6b2ef9d9",
+                                        "id": "42011f2e-e0f6-4bc0-b841-7a482d847f29",
                                         "name": "Not properly authenticated",
                                         "originalRequest": {
                                             "method": "POST",
@@ -6389,7 +6389,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "75fac3c4-0180-4ae7-8dc2-049f463b4f2d",
+                                        "id": "264b641b-2fdc-425e-80cd-ba90dcaf8582",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "POST",
@@ -6454,10 +6454,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "b36d8535-b028-42a5-8f61-789a0545e370",
+                                        "id": "2c32ffef-84c9-405e-af0e-50c3f1987e02",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "POST",
@@ -6522,16 +6522,16 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             }
                         ],
-                        "id": "c15ed3fd-972b-4e8b-af4a-76c95e4ce60e"
+                        "id": "6dcba5aa-3150-40b1-ac65-8fdf713b7d8c"
                     },
                     {
                         "name": "Create a new Submission",
-                        "id": "56841e66-95fc-4126-bf88-bf3330e54858",
+                        "id": "dddaefc0-8c94-4de0-8799-f25e6339b45a",
                         "protocolProfileBehavior": {
                             "disableBodyPruning": true
                         },
@@ -6576,7 +6576,7 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "4262cd1a-052a-48a0-affe-10de06519fd5",
+                                        "id": "b5cf3d91-554a-4f9c-9db9-b1902bf42314",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -6586,7 +6586,7 @@
                         },
                         "response": [
                             {
-                                "id": "406cbb48-6d8a-4583-ba98-9a6328dff160",
+                                "id": "6ed31e19-d652-4dca-8500-2a734d0813b3",
                                 "name": "Submission successfully created",
                                 "originalRequest": {
                                     "method": "POST",
@@ -6644,10 +6644,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"id\": \"adipisicing dolor\",\n  \"owner\": \"laboris\",\n  \"title\": \"dolor\",\n  \"status\": \"PROCESSING\",\n  \"created_time\": \"2013-06-08T14:26:20.863Z\"\n}"
+                                "body": "{\n  \"id\": \"in dolore amet ea proident\",\n  \"owner\": \"sint nulla\",\n  \"title\": \"occaecat nulla \",\n  \"status\": \"PROCESSING\",\n  \"created_time\": \"1964-09-03T19:10:52.107Z\"\n}"
                             },
                             {
-                                "id": "49106d80-fedf-403d-a973-41092a5b3dcf",
+                                "id": "2801bbc4-2397-4a0b-b0ce-102c9df6496d",
                                 "name": "Request is malformed or missing required data",
                                 "originalRequest": {
                                     "method": "POST",
@@ -6708,7 +6708,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "886eef80-7d36-47da-9e4e-523f457e569b",
+                                "id": "67f727bd-696c-48ed-b91b-2988d9bbeed9",
                                 "name": "Not properly authenticated",
                                 "originalRequest": {
                                     "method": "POST",
@@ -6769,7 +6769,7 @@
                                 "body": ""
                             },
                             {
-                                "id": "fc4f231b-6dc9-4805-9ca2-65f616522035",
+                                "id": "97fc7d73-b6e0-4754-b1ad-f0b2f7c32d1d",
                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                 "originalRequest": {
                                     "method": "POST",
@@ -6827,10 +6827,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             },
                             {
-                                "id": "f422b502-21b5-49b3-9f91-b1d06478449b",
+                                "id": "c70424c3-db12-4a50-8632-d641370fb48b",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "POST",
@@ -6888,12 +6888,12 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     }
                 ],
-                "id": "ab1fe0d4-849b-460b-aad3-0d8d0c3e3149"
+                "id": "c67d4036-d98c-41fb-9f5a-242d1cb5753c"
             },
             {
                 "name": "webhooks",
@@ -6903,7 +6903,7 @@
                         "item": [
                             {
                                 "name": "Get Webhook endpoint info",
-                                "id": "20297dcc-e552-4ec2-ae7b-8eb17c45dc72",
+                                "id": "4c47eca2-f046-4950-988d-7972c4ecb5c2",
                                 "request": {
                                     "method": "GET",
                                     "header": [
@@ -6933,13 +6933,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "28ccec8f-bc34-40c0-866b-2b005608ddfd",
+                                                "id": "cea93c12-c7a7-49da-a979-35a34323f9b0",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) "
                                             },
                                             {
-                                                "id": "18fbd20a-9975-469b-9377-599fee270969",
+                                                "id": "fac7e104-749a-4f5c-948f-16350215ee3e",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -6949,7 +6949,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "bb58924d-9894-40c0-abfa-1e5f99eeae27",
+                                        "id": "e7b403b5-9894-4bb8-930d-81b2c728367e",
                                         "name": "Success",
                                         "originalRequest": {
                                             "method": "GET",
@@ -7004,10 +7004,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"id Duis anim\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2012-09-22T11:16:08.099Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
+                                        "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"exercitation reprehenderit\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2021-08-02T03:46:06.811Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
                                     },
                                     {
-                                        "id": "a1fd74fc-8563-48f6-9d8c-9f3d36faf898",
+                                        "id": "b9a90afc-98bf-40b9-896e-297be1c41cb2",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "GET",
@@ -7062,10 +7062,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "996fff41-5b9a-42f0-979b-09aa038e8f86",
+                                        "id": "78d5c8f0-8329-4355-99d3-ac342b4d0b53",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "GET",
@@ -7120,13 +7120,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Delete Webhook endpoint",
-                                "id": "e9d6e105-54d9-483c-95bb-9e845724e500",
+                                "id": "b44f457b-f37a-4a74-a674-3a0e655e3694",
                                 "request": {
                                     "method": "DELETE",
                                     "header": [
@@ -7156,13 +7156,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "649bc647-652c-4c7b-864c-a2966c98d6de",
+                                                "id": "2c7c367e-0bd1-4d3a-83d2-196f37020825",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) "
                                             },
                                             {
-                                                "id": "6b531704-b563-4ab7-a16d-f0520efb5f6d",
+                                                "id": "63f80f15-17b1-4149-8841-2ac52a8ad56c",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -7172,7 +7172,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "beddbf76-35d4-4789-9966-1afbf9dfc73d",
+                                        "id": "2e4c09e2-c36a-4935-ae4b-7c1db7a4621e",
                                         "name": "Success",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -7230,7 +7230,7 @@
                                         "body": ""
                                     },
                                     {
-                                        "id": "8a7f0d53-67b4-4263-a1ab-2fedbf605e6b",
+                                        "id": "8710b99e-e773-46bb-aad6-411104197197",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -7285,10 +7285,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "a6c92d22-a8ed-46af-a5c3-360fffe80b5a",
+                                        "id": "fcfe51af-9a6c-41fa-93f5-e800e626bf95",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "DELETE",
@@ -7343,13 +7343,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Update Webhook endpoint info",
-                                "id": "797722a9-e8a6-474a-a643-c804191bbbe7",
+                                "id": "16f340b9-5e61-4c68-8b42-6aa286f707e6",
                                 "protocolProfileBehavior": {
                                     "disableBodyPruning": true
                                 },
@@ -7395,13 +7395,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "e80e40f1-58e5-4eab-a83d-e7f75363d460",
+                                                "id": "04391d0a-1025-42a4-ab44-e12794b895b9",
                                                 "key": "id",
                                                 "value": "<string>",
                                                 "description": "(Required) "
                                             },
                                             {
-                                                "id": "937dedfa-02cd-4242-8b43-ea1dbd37001b",
+                                                "id": "7691c80b-2bc8-4645-95db-a96a119de85a",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -7411,7 +7411,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "98d36705-49df-41fa-95bc-7ab506c601bc",
+                                        "id": "84c0cdfd-e44d-4524-b4d3-fc698a9e3390",
                                         "name": "Success",
                                         "originalRequest": {
                                             "method": "PATCH",
@@ -7475,10 +7475,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"id Duis anim\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2012-09-22T11:16:08.099Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
+                                        "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"exercitation reprehenderit\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2021-08-02T03:46:06.811Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
                                     },
                                     {
-                                        "id": "86c7bfe7-1cad-4737-8dde-4dad3c3fb0ab",
+                                        "id": "df1bb834-5d13-424e-a9c6-24bae23a5ef3",
                                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                         "originalRequest": {
                                             "method": "PATCH",
@@ -7542,10 +7542,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     },
                                     {
-                                        "id": "06e7bd88-99bb-4c71-9bd0-95546f051d9c",
+                                        "id": "81ffdcc6-059f-4a0a-a88c-0aa23dd8e904",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "PATCH",
@@ -7609,16 +7609,16 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             }
                         ],
-                        "id": "b142dbd7-66e3-4e8a-895b-1a10ceb3331e"
+                        "id": "31a2dfa9-0de3-426e-a12a-fd84e72db811"
                     },
                     {
                         "name": "List registered Webhook endpoints",
-                        "id": "24603b65-c43f-4992-a714-aaeb88d1fc0b",
+                        "id": "bcd3ad53-460b-4717-8a69-ee9744cf3f57",
                         "request": {
                             "method": "GET",
                             "header": [
@@ -7647,7 +7647,7 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "cfcabef4-3773-4f36-881d-626acc2284b8",
+                                        "id": "cc484b65-4f0e-43c7-9a87-efa6427493b4",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -7657,7 +7657,7 @@
                         },
                         "response": [
                             {
-                                "id": "b293edc3-e659-4a43-ae20-6b58c397ac70",
+                                "id": "7cb9286f-df0d-4d0b-b879-9f108ff6fa99",
                                 "name": "Success",
                                 "originalRequest": {
                                     "method": "GET",
@@ -7706,10 +7706,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "[\n  {\n    \"event_types\": [\n      \"SIMILARITY_UPDATED\",\n      \"SIMILARITY_UPDATED\"\n    ],\n    \"id\": \"pariatur aliqua\",\n    \"url\": \"deserunt reprehenderit labore minim\",\n    \"created_time\": \"1984-02-03T01:11:21.678Z\",\n    \"description\": \"est nulla aute mollit\",\n    \"allow_insecure\": false\n  },\n  {\n    \"event_types\": [\n      \"PDF_STATUS\",\n      \"SIMILARITY_UPDATED\"\n    ],\n    \"id\": \"Lorem exercitation aliquip occaecat\",\n    \"url\": \"laboris dolore eiusmod consequat adipisicing\",\n    \"created_time\": \"1973-02-15T21:49:41.351Z\",\n    \"description\": \"anim in\",\n    \"allow_insecure\": false\n  }\n]"
+                                "body": "[\n  {\n    \"event_types\": [\n      \"SIMILARITY_UPDATED\",\n      \"SUBMISSION_COMPLETE\"\n    ],\n    \"id\": \"ullamco\",\n    \"url\": \"exercitation eiusmod sunt et\",\n    \"created_time\": \"1982-05-12T02:59:27.435Z\",\n    \"description\": \"labore deserunt dolo\",\n    \"allow_insecure\": false\n  },\n  {\n    \"event_types\": [\n      \"GROUP_ATTACHMENT_COMPLETE\",\n      \"PDF_STATUS\"\n    ],\n    \"id\": \"mollit et eu\",\n    \"url\": \"ullamco dolore deserunt\",\n    \"created_time\": \"2010-07-12T23:51:22.389Z\",\n    \"description\": \"reprehenderit ipsum mollit pariatur\",\n    \"allow_insecure\": true\n  }\n]"
                             },
                             {
-                                "id": "42387893-b584-480c-b409-8bdc6205b6ea",
+                                "id": "795ecd57-48b2-4cf8-be43-641cb9b6855a",
                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                 "originalRequest": {
                                     "method": "GET",
@@ -7758,10 +7758,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             },
                             {
-                                "id": "cb65d4aa-ceef-4609-bc61-9d443d007540",
+                                "id": "173ef959-9e37-49d7-b0bd-dd606f6828ab",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "GET",
@@ -7810,13 +7810,13 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     },
                     {
                         "name": "Register a Webhook endpoint",
-                        "id": "53baa8b1-d08a-4d00-b2d0-8a37ce9537d5",
+                        "id": "c5437c48-2337-468c-9d32-0f1d819bebeb",
                         "protocolProfileBehavior": {
                             "disableBodyPruning": true
                         },
@@ -7861,7 +7861,7 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "5878ebbd-7eaf-4d09-b00e-7f88340e484c",
+                                        "id": "bc933ca8-a6cd-4559-b9a2-45c4a37f2fb1",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -7871,7 +7871,7 @@
                         },
                         "response": [
                             {
-                                "id": "c9178c98-23c4-4c04-9603-16a5958fe022",
+                                "id": "74ae772a-1c81-46b7-87aa-f7fd938cc92f",
                                 "name": "Success",
                                 "originalRequest": {
                                     "method": "POST",
@@ -7929,10 +7929,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"id Duis anim\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2012-09-22T11:16:08.099Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
+                                "body": "{\n  \"event_types\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": \"exercitation reprehenderit\",\n  \"url\": \"<string>\",\n  \"created_time\": \"2021-08-02T03:46:06.811Z\",\n  \"description\": \"<string>\",\n  \"allow_insecure\": \"<boolean>\"\n}"
                             },
                             {
-                                "id": "b06b566b-e7af-4417-b755-2c5936438814",
+                                "id": "e6ebf916-a0d1-40fa-88fc-44dc548718ce",
                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                 "originalRequest": {
                                     "method": "POST",
@@ -7990,10 +7990,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             },
                             {
-                                "id": "dddbdb12-79d1-4ff0-bc35-8d8aad8c06a8",
+                                "id": "04b04355-54ef-4a47-aa9d-f761fccdf4d5",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "POST",
@@ -8051,12 +8051,12 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     }
                 ],
-                "id": "8f3829d9-1351-4359-933f-0e3c0a1d7833"
+                "id": "5243f951-cd3f-44d2-bf98-2487bac0b340"
             },
             {
                 "name": "groups/{group id}",
@@ -8069,7 +8069,7 @@
                                 "item": [
                                     {
                                         "name": "Get group attachment",
-                                        "id": "46d664b3-e7ab-4c92-be35-7b9a75c7076a",
+                                        "id": "de96cb5c-664f-4cfa-89e7-f5429f267d5d",
                                         "request": {
                                             "method": "GET",
                                             "header": [
@@ -8101,19 +8101,19 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "a072e5a4-8d94-480a-8feb-b9f107b18f15",
+                                                        "id": "6b1d1f7e-4e76-4fee-89fc-cb48fc430795",
                                                         "key": "group_id",
                                                         "value": "<string>",
                                                         "description": "(Required) group_id"
                                                     },
                                                     {
-                                                        "id": "1c85a09c-a869-43b0-add1-0574eb61663e",
+                                                        "id": "67da30a9-ef3b-4e2c-8e8c-add02a3271d9",
                                                         "key": "attach_id",
                                                         "value": "<string>",
                                                         "description": "(Required) The attachment ID (returned from a successful group attachment request)\n"
                                                     },
                                                     {
-                                                        "id": "687d1b46-9a80-4567-9057-d9a5e2543d42",
+                                                        "id": "98776cf2-845b-4253-b601-11d1af96c6f9",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -8123,7 +8123,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "913d2d3a-4c26-4d5d-90b2-3bdb1cc87fbc",
+                                                "id": "97cfbb56-66cc-4438-8bfa-21b4080e039c",
                                                 "name": "Successfully get attachment",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -8185,10 +8185,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n  \"title\": \"History\",\n  \"status\": \"CREATED\",\n  \"template\": false\n}"
+                                                "body": "{\n  \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n  \"title\": \"History\",\n  \"status\": \"CREATED\",\n  \"template\": true\n}"
                                             },
                                             {
-                                                "id": "4d7ad17a-48be-45e9-accf-de1f7735c9e2",
+                                                "id": "c1a01887-5904-4d4c-9e8f-973be57cb0ac",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "GET",
@@ -8250,13 +8250,13 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     },
                                     {
                                         "name": "Hard delete group attachment",
-                                        "id": "621f64bf-5a97-4b77-a6c5-91afef9e625b",
+                                        "id": "9d615e66-d5ca-4a31-b16a-e84486d52f9f",
                                         "request": {
                                             "method": "DELETE",
                                             "header": [
@@ -8288,19 +8288,19 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "4221b581-ef09-46eb-8d62-b1cc3b1d2fb5",
+                                                        "id": "85cf7f1f-5ea5-4ce5-8f60-2fcf6ba609b5",
                                                         "key": "group_id",
                                                         "value": "<string>",
                                                         "description": "(Required) group_id"
                                                     },
                                                     {
-                                                        "id": "d958e66e-21d2-44d2-9c70-07707e4a6bde",
+                                                        "id": "81770cd1-ed98-4268-a12e-4a4cdb559ba1",
                                                         "key": "attach_id",
                                                         "value": "<string>",
                                                         "description": "(Required) The attachment ID (returned from a successful group attachment request)\n"
                                                     },
                                                     {
-                                                        "id": "37d96e87-052f-49f5-bd26-cd8eab4dbc06",
+                                                        "id": "8dcdd3ff-6c55-4bfc-b95b-9e62b4fd08a5",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -8310,7 +8310,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "2a24040f-fc22-404f-acc5-36b2b001efa2",
+                                                "id": "72bbbfd4-04cf-41f5-b83c-58f9969e5e5c",
                                                 "name": "Attachment successfully deleted",
                                                 "originalRequest": {
                                                     "method": "DELETE",
@@ -8375,7 +8375,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "ac1e6f8f-5f3c-4f93-b341-351affe1ec2f",
+                                                "id": "b705362d-993d-4e15-ae20-730bf766959c",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "DELETE",
@@ -8437,13 +8437,13 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     },
                                     {
                                         "name": "Patch a group attachment",
-                                        "id": "c29f0a00-bb1c-4b32-9685-50e5516d6500",
+                                        "id": "1bd2905f-6900-4361-bc8e-8ccd72b7cd55",
                                         "protocolProfileBehavior": {
                                             "disableBodyPruning": true
                                         },
@@ -8491,19 +8491,19 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "736b9ef4-96c6-4914-87a9-096d2855663a",
+                                                        "id": "2dd38a58-734d-497f-a935-48cd02403772",
                                                         "key": "group_id",
                                                         "value": "<string>",
                                                         "description": "(Required) group_id"
                                                     },
                                                     {
-                                                        "id": "f0b4e3e6-2bfb-4e5c-ba39-f0958b34694d",
+                                                        "id": "fc94ac02-d529-4130-8bb3-25e41e1854f5",
                                                         "key": "attach_id",
                                                         "value": "<string>",
                                                         "description": "(Required) The attachment ID (returned from a successful group attachment request)\n"
                                                     },
                                                     {
-                                                        "id": "dedfb7a2-29ae-4a8c-a163-c4d57cff5ab3",
+                                                        "id": "87ec3c73-0ebd-4be5-a2bd-8e165f641d1e",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -8513,7 +8513,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "10a8eca6-f837-4f96-89ac-8082024d3441",
+                                                "id": "dc783381-efcc-4fae-89e2-7718b0d6f02a",
                                                 "name": "Successfully get attachment",
                                                 "originalRequest": {
                                                     "method": "PATCH",
@@ -8584,10 +8584,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n  \"title\": \"History\",\n  \"status\": \"CREATED\",\n  \"template\": false\n}"
+                                                "body": "{\n  \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n  \"title\": \"History\",\n  \"status\": \"CREATED\",\n  \"template\": true\n}"
                                             },
                                             {
-                                                "id": "97fcc1e9-d932-477f-9a6c-27b88d39557c",
+                                                "id": "43e59675-ce4d-4826-8c58-3f2934c3fad3",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "PATCH",
@@ -8658,13 +8658,13 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     },
                                     {
                                         "name": "Upload Submitted File",
-                                        "id": "cff22488-ea0a-4299-8d42-92d16434e705",
+                                        "id": "a658c74d-388e-4735-b56a-0e0431ef6fdb",
                                         "protocolProfileBehavior": {
                                             "disableBodyPruning": true
                                         },
@@ -8713,19 +8713,19 @@
                                                 ],
                                                 "variable": [
                                                     {
-                                                        "id": "cb96cf04-1eb1-4e32-8540-feb3df56d545",
+                                                        "id": "a2ec346c-e6cd-4e2c-ad22-fc1e6eabbe54",
                                                         "key": "group_id",
                                                         "value": "<string>",
                                                         "description": "(Required) The Group ID (required to already exist)\n"
                                                     },
                                                     {
-                                                        "id": "8318ea05-8ea6-4b0e-a20c-218c91b5fb76",
+                                                        "id": "0d63cb02-26ac-4701-a305-9358eb129d7e",
                                                         "key": "attach_id",
                                                         "value": "<string>",
                                                         "description": "(Required) The attachment ID (returned from a successful group attachment request)\n"
                                                     },
                                                     {
-                                                        "id": "5cc5e3a4-a71b-488f-9bf4-b5a92c51cc61",
+                                                        "id": "57b4e7a5-c4ca-46b4-9635-709fb41b6e7f",
                                                         "key": "tenantName",
                                                         "value": "{{tenantName}}",
                                                         "description": "Customer tenant name"
@@ -8735,7 +8735,7 @@
                                         },
                                         "response": [
                                             {
-                                                "id": "5181f2b6-2358-490d-9978-a0fed7d91557",
+                                                "id": "a33602ee-847f-47be-8727-3afc7e02bff4",
                                                 "name": "Success message indicating successful PUT request for a submission upload\n",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -8807,10 +8807,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"message\": \"cupidatat culpa tempor non\"\n}"
+                                                "body": "{\n  \"message\": \"ipsum\"\n}"
                                             },
                                             {
-                                                "id": "43453d65-c303-4ab5-a47a-bbae1b7c1fe0",
+                                                "id": "f98bcbb1-ea11-4fc9-9ca5-991efd3ff731",
                                                 "name": "Invalid submission file size, Submission file must be > than 0 MB and <= to 100 MB",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -8882,10 +8882,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             },
                                             {
-                                                "id": "c936af06-5deb-4afb-9477-9c09a1fad334",
+                                                "id": "cbb81fbf-71a0-48ed-b64d-1a6f6c34ff7c",
                                                 "name": "Not properly authenticated",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -8960,7 +8960,7 @@
                                                 "body": ""
                                             },
                                             {
-                                                "id": "62362723-c7da-4909-993c-eea6875f3035",
+                                                "id": "13267d7f-7611-4653-90cf-f3ef4a46ea13",
                                                 "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -9032,10 +9032,10 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             },
                                             {
-                                                "id": "80afd4cf-a659-45f8-9588-f93a3cc24a93",
+                                                "id": "df38e92d-e352-44fa-baed-80e751be971c",
                                                 "name": "An Error Occurred",
                                                 "originalRequest": {
                                                     "method": "PUT",
@@ -9107,16 +9107,16 @@
                                                 ],
                                                 "cookie": [],
                                                 "responseTime": null,
-                                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                             }
                                         ]
                                     }
                                 ],
-                                "id": "df6263a6-3a46-4b4e-9839-501545eece1f"
+                                "id": "26cb314e-0625-4670-b6c8-2d5748e45169"
                             },
                             {
                                 "name": "Get all attachments",
-                                "id": "c8802c4b-3f63-4441-bf8b-2b861db2a531",
+                                "id": "e31febbd-023a-4047-8bb3-ab6a78daab84",
                                 "request": {
                                     "method": "GET",
                                     "header": [
@@ -9147,13 +9147,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "951ecd51-49ef-4104-aa77-8a9c77ebda59",
+                                                "id": "5f8c4d82-47eb-43f2-ad7b-5f82f9ea225f",
                                                 "key": "group_id",
                                                 "value": "<string>",
                                                 "description": "(Required) group_id"
                                             },
                                             {
-                                                "id": "30544f37-1e99-4d95-af30-1f756f827d8b",
+                                                "id": "0b8a4fb2-1d97-4645-b5ea-990837b0bc69",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -9163,7 +9163,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "063bc95b-54fa-438b-9cc6-c4f7d2d77c7a",
+                                        "id": "69cf09ed-1b3f-43f4-98b9-8d38be2271b8",
                                         "name": "Successfully get attachments",
                                         "originalRequest": {
                                             "method": "GET",
@@ -9219,10 +9219,10 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"attachments\": [\n    {\n      \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n      \"title\": \"History\",\n      \"status\": \"ERROR\",\n      \"template\": true\n    },\n    {\n      \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n      \"title\": \"History\",\n      \"status\": \"COMPLETE\",\n      \"template\": true\n    }\n  ]\n}"
+                                        "body": "{\n  \"attachments\": [\n    {\n      \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n      \"title\": \"History\",\n      \"status\": \"CREATED\",\n      \"template\": false\n    },\n    {\n      \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\",\n      \"title\": \"History\",\n      \"status\": \"PROCESSING\",\n      \"template\": false\n    }\n  ]\n}"
                                     },
                                     {
-                                        "id": "167add60-10c2-4788-9ee0-b6e21b17c587",
+                                        "id": "5d3ab49c-50cb-4a5a-bde1-ac04189fb8fb",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "GET",
@@ -9278,13 +9278,13 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             },
                             {
                                 "name": "Add attachment to a group. will create a group if it does not exist.",
-                                "id": "8269678a-0eb4-493f-a98b-77ef351df9b9",
+                                "id": "5b446118-c1e1-40ad-9a16-f54c38926531",
                                 "protocolProfileBehavior": {
                                     "disableBodyPruning": true
                                 },
@@ -9331,13 +9331,13 @@
                                         ],
                                         "variable": [
                                             {
-                                                "id": "a458adba-3ecd-49d2-be6b-69aba6781501",
+                                                "id": "2fef07bd-c60c-462f-bd25-64d94d34b1ff",
                                                 "key": "group_id",
                                                 "value": "<string>",
                                                 "description": "(Required) group_id"
                                             },
                                             {
-                                                "id": "356cfb59-606b-43fe-8372-274212a8253d",
+                                                "id": "32a3224e-c76f-4fe5-87ae-0ecce3959211",
                                                 "key": "tenantName",
                                                 "value": "{{tenantName}}",
                                                 "description": "Customer tenant name"
@@ -9347,7 +9347,7 @@
                                 },
                                 "response": [
                                     {
-                                        "id": "b2a02dc9-620a-4ab0-b904-1292edfc80df",
+                                        "id": "30bb272c-c869-4dec-a3f9-1a4f2c7431bd",
                                         "name": "Successfully add attachment",
                                         "originalRequest": {
                                             "method": "POST",
@@ -9415,7 +9415,7 @@
                                         "body": "{\n  \"id\": \"768f4633-d4c5-3ba0-8814-caaf421c8985\"\n}"
                                     },
                                     {
-                                        "id": "1c2ec385-5d69-4195-9f30-3a80dc8b524f",
+                                        "id": "8927dc7e-c682-4751-a9c8-7c68b0e82992",
                                         "name": "An Error Occurred",
                                         "originalRequest": {
                                             "method": "POST",
@@ -9480,16 +9480,16 @@
                                         ],
                                         "cookie": [],
                                         "responseTime": null,
-                                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                                     }
                                 ]
                             }
                         ],
-                        "id": "c0a5610c-209f-436a-8fe5-8757bc2950bb"
+                        "id": "86de429e-817b-41cc-9333-729354c9681a"
                     },
                     {
                         "name": "Get group, group context and group context owners info",
-                        "id": "60fa33a6-d0c1-4493-bce2-c3491c183459",
+                        "id": "d0295499-2b58-47ea-b722-97e3815b14fa",
                         "request": {
                             "method": "GET",
                             "header": [
@@ -9519,13 +9519,13 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "c4d34195-c124-4923-97a2-8ab3db462df6",
+                                        "id": "d0a48ac2-8c81-4345-a2e2-e186d18c7be8",
                                         "key": "group_id",
                                         "value": "<string>",
                                         "description": "(Required) group_id"
                                     },
                                     {
-                                        "id": "5cc1bcd3-7b5c-493d-b0d5-5aa06d942281",
+                                        "id": "298a04b9-c005-4d75-bb60-88b2cb9c131f",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -9535,7 +9535,7 @@
                         },
                         "response": [
                             {
-                                "id": "cb2b0b75-6123-4eed-93bb-393cd78af968",
+                                "id": "917fda1f-17b1-4d35-bc53-340ce6d5696d",
                                 "name": "Successfully get AggregateGroup",
                                 "originalRequest": {
                                     "method": "GET",
@@ -9590,10 +9590,10 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"id\": \"ullamco cillum amet sunt\",\n  \"name\": \"in velit\",\n  \"type\": \"FOLDER\",\n  \"group_context\": {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"owners\": [\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      }\n    ]\n  },\n  \"due_date\": \"1977-02-28\",\n  \"report_generation\": \"IMMEDIATELY\"\n}"
+                                "body": "{\n  \"id\": \"dolor ut Ut in\",\n  \"name\": \"voluptate n\",\n  \"type\": \"ASSIGNMENT\",\n  \"group_context\": {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"owners\": [\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      }\n    ]\n  },\n  \"due_date\": \"1982-07-15\",\n  \"report_generation\": \"IMMEDIATELY\"\n}"
                             },
                             {
-                                "id": "19ee85c7-9b6d-4d8a-a283-75cf6bdc5b38",
+                                "id": "d9cc62f1-e3ea-4b79-b4dd-1b3d4c88840f",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "GET",
@@ -9648,13 +9648,13 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     },
                     {
                         "name": "upsert group, group context and group context owners info",
-                        "id": "f74d7e6f-7f1e-4c61-98c5-2c67745e489e",
+                        "id": "1dafbb0b-cb01-44f8-a664-949481cbd2d2",
                         "protocolProfileBehavior": {
                             "disableBodyPruning": true
                         },
@@ -9700,13 +9700,13 @@
                                 ],
                                 "variable": [
                                     {
-                                        "id": "e631d7ca-9f8d-4481-b852-febdcf3e9ad5",
+                                        "id": "8dc5ec64-8004-4fd9-8732-8e9f5449d4eb",
                                         "key": "group_id",
                                         "value": "<string>",
                                         "description": "(Required) group_id"
                                     },
                                     {
-                                        "id": "a2c0257b-1668-4e41-902b-6119469f2f43",
+                                        "id": "23253ad9-661e-4546-a80f-59b7636c39fa",
                                         "key": "tenantName",
                                         "value": "{{tenantName}}",
                                         "description": "Customer tenant name"
@@ -9716,7 +9716,7 @@
                         },
                         "response": [
                             {
-                                "id": "f2eed524-906a-4271-9968-9e91de85e89d",
+                                "id": "98bdfe6e-06f2-4c10-ae0e-8cc2e745c113",
                                 "name": "Successfully upssert group, group context and group context owners",
                                 "originalRequest": {
                                     "method": "PUT",
@@ -9783,7 +9783,7 @@
                                 "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"type\": \"<string>\",\n  \"group_context\": {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"owners\": [\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      },\n      {\n        \"id\": \"<string>\",\n        \"family_name\": \"<string>\",\n        \"given_name\": \"<string>\",\n        \"email\": \"<email>\"\n      }\n    ]\n  },\n  \"due_date\": \"<date>\",\n  \"report_generation\": \"<string>\"\n}"
                             },
                             {
-                                "id": "80e274d7-dad9-4ce6-b323-31d386d084d5",
+                                "id": "b0f91694-014b-4068-88d7-bbc4a92b0451",
                                 "name": "An Error Occurred",
                                 "originalRequest": {
                                     "method": "PUT",
@@ -9847,16 +9847,16 @@
                                 ],
                                 "cookie": [],
                                 "responseTime": null,
-                                "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                                "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                             }
                         ]
                     }
                 ],
-                "id": "8ebf7ecd-a542-4d73-9061-c4198666f5d2"
+                "id": "b3bcaac1-02ef-4ae4-a9b8-d70a4f572734"
             },
             {
                 "name": "Get information about what features are allowed by the current license",
-                "id": "3d99cb4b-be44-4c63-b744-6695f2738f0c",
+                "id": "fedf3a91-d9d1-4967-b5c2-f89f85d98e2b",
                 "request": {
                     "method": "GET",
                     "header": [
@@ -9885,7 +9885,7 @@
                         ],
                         "variable": [
                             {
-                                "id": "5566989d-8ef8-4527-aab3-e952b94a398c",
+                                "id": "3b722c6c-b164-4935-9625-1ed9012928b1",
                                 "key": "tenantName",
                                 "value": "{{tenantName}}",
                                 "description": "Customer tenant name"
@@ -9895,7 +9895,7 @@
                 },
                 "response": [
                     {
-                        "id": "2d751c43-ef1d-4865-af98-1960485a3fc9",
+                        "id": "cc1eb90a-a1ff-4947-837a-b6d88d470e24",
                         "name": "List of available features",
                         "originalRequest": {
                             "method": "GET",
@@ -9944,10 +9944,10 @@
                         ],
                         "cookie": [],
                         "responseTime": null,
-                        "body": "{\n  \"similarity\": {\n    \"viewer_modes\": {\n      \"match_overview\": true,\n      \"all_sources\": true\n    },\n    \"generation_settings\": {\n      \"search_repositories\": [\n        \"PUBLICATION\",\n        \"CROSSREF_POSTED_CONTENT\"\n      ],\n      \"submission_auto_excludes\": true\n    },\n    \"view_settings\": {\n      \"exclude_quotes\": true,\n      \"exclude_bibliography\": true,\n      \"exclude_citations\": true,\n      \"exclude_abstract\": true,\n      \"exclude_methods\": true,\n      \"exclude_small_matches\": true,\n      \"exclude_internet\": true,\n      \"exclude_publications\": true,\n      \"exclude_crossref\": true,\n      \"exclude_crossref_posted_content\": true,\n      \"exclude_submitted_works\": true,\n      \"exclude_custom_sections\": true,\n      \"exclude_preprints\": true\n    }\n  },\n  \"tenant\": {\n    \"require_eula\": true\n  },\n  \"product_name\": \"labore \",\n  \"access_options\": [\n    \"CORE_API\",\n    \"DRAFT_COACH\"\n  ]\n}"
+                        "body": "{\n  \"similarity\": {\n    \"viewer_modes\": {\n      \"match_overview\": true,\n      \"all_sources\": false\n    },\n    \"generation_settings\": {\n      \"search_repositories\": [\n        \"PUBLICATION\",\n        \"SUBMITTED_WORK\"\n      ],\n      \"submission_auto_excludes\": true\n    },\n    \"view_settings\": {\n      \"exclude_quotes\": true,\n      \"exclude_bibliography\": true,\n      \"exclude_citations\": true,\n      \"exclude_abstract\": true,\n      \"exclude_methods\": true,\n      \"exclude_small_matches\": true,\n      \"exclude_internet\": true,\n      \"exclude_publications\": true,\n      \"exclude_crossref\": true,\n      \"exclude_crossref_posted_content\": true,\n      \"exclude_submitted_works\": true,\n      \"exclude_custom_sections\": true,\n      \"exclude_preprints\": true\n    }\n  },\n  \"tenant\": {\n    \"require_eula\": true\n  },\n  \"product_name\": \"quis minim\",\n  \"access_options\": [\n    \"NATIVE\",\n    \"CORE_API\"\n  ]\n}"
                     },
                     {
-                        "id": "c018bf13-b2ea-4ca2-871c-47c8e4c947fb",
+                        "id": "e3aa0f00-1b5b-43a6-b83a-2e0b889d03b1",
                         "name": "Not properly authenticated",
                         "originalRequest": {
                             "method": "GET",
@@ -9999,7 +9999,7 @@
                         "body": ""
                     },
                     {
-                        "id": "17a84a97-461a-4e25-bca6-30d8ac6bdea0",
+                        "id": "9dd021f2-cb69-4766-9e74-6aa3d5072b0b",
                         "name": "Too many requests have been made in a short amount of time, please wait for\na bit a try again.\n",
                         "originalRequest": {
                             "method": "GET",
@@ -10048,10 +10048,10 @@
                         ],
                         "cookie": [],
                         "responseTime": null,
-                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                     },
                     {
-                        "id": "ea863a60-44ea-4e0c-8c2b-5c3bc58f1853",
+                        "id": "c8e82d41-57fb-4153-9058-3e7ca3c91563",
                         "name": "An Error Occurred",
                         "originalRequest": {
                             "method": "GET",
@@ -10100,7 +10100,7 @@
                         ],
                         "cookie": [],
                         "responseTime": null,
-                        "body": "{\n  \"status\": \"consectetur dolore\",\n  \"message\": \"cillum est elit laboris\"\n}"
+                        "body": "{\n  \"status\": \"tempor\",\n  \"message\": \"ullamco laborum nulla\"\n}"
                     }
                 ]
             }
@@ -10127,14 +10127,14 @@
         },
         "variable": [
             {
-                "id": "23e87093-b558-4d2b-85b6-b8f723ce2b9e",
+                "id": "372e503b-35fb-4bcc-b63b-e5df76ec2eb8",
                 "key": "tenantName",
                 "value": "app-us",
                 "type": "any",
                 "description": "Customer tenant name"
             },
             {
-                "id": "bf5bcdab-9144-432e-bbc8-bc08d527cf24",
+                "id": "25362b88-893b-48d1-b79b-88b18c439e12",
                 "key": "baseUrl",
                 "value": "https://{{tenantName}}.turnitin.com/api/v1",
                 "type": "string"
