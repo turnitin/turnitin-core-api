@@ -29,7 +29,7 @@ info:
          * If you registered a webhook, a callback will be sent to it when report is complete
          * The status of the *report* will also be updated to `COMPLETE`
       *  Request a URL with parameters to view the Similarity Report
-  version: 1.0.249
+  version: 1.0.258
 externalDocs:
   description: Developer Portal Documentation page
   url: https://developers.turnitin.com/docs
@@ -759,6 +759,12 @@ paths:
           required: true
           schema:
             type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateSimilarityPDF'
+        required: true
       responses:
         200:
           description: |
@@ -984,6 +990,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: asynchronous
+          in: query
+          description: asynchronous request
+          required: false
+          schema:
+            type: boolean
       responses:
         200:
           description: Successfully indexed submission
@@ -2125,6 +2137,43 @@ components:
           $ref: '#/components/schemas/Sidebar'
         similarity:
           $ref: '#/components/schemas/SimilaritySettings'
+        annotations:
+          $ref: '#/components/schemas/AnnotationsSettings'
+    GenerateSimilarityPDF:
+      type: object
+      properties:
+        locale:
+          type: string
+          description: two character locale language setting (e.g. 'en' or 'de') or full value
+          enum:
+            - ar-SA
+            - cs-CZ
+            - de-DE
+            - el-GR
+            - en-US
+            - es-MX
+            - fi-FI
+            - fr-FR
+            - it-IT
+            - ja-JP
+            - ko-KR
+            - nl-NL
+            - pl-PL
+            - pt-BR
+            - ro-RO
+            - ru-RU
+            - sv-SE
+            - tr-TR
+            - vi-VN
+            - zh-CN
+            - zh-TW
+    AnnotationsSettings:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          description: Used to enable annotations
+
     SimilaritySettings:
       type: object
       properties:
