@@ -26,12 +26,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Content-Type",
@@ -92,12 +92,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -160,12 +160,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -228,12 +228,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -296,12 +296,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -364,12 +364,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -432,12 +432,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -492,12 +492,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -557,12 +557,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -622,12 +622,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -687,12 +687,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -752,12 +752,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -820,12 +820,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Accept",
@@ -879,12 +879,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -943,12 +943,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1007,12 +1007,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1071,12 +1071,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1135,12 +1135,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1199,12 +1199,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Accept",
@@ -1259,12 +1259,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1324,12 +1324,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1389,12 +1389,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1454,12 +1454,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1519,12 +1519,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -1602,12 +1602,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "<string>"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "<string>"
+                                                                    "value": "{{integrationVersion}}"
                                                                 },
                                                                 {
                                                                     "key": "Accept",
@@ -1663,12 +1663,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -1729,12 +1729,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -1795,12 +1795,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -1861,12 +1861,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -1927,12 +1927,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -1993,12 +1993,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2059,12 +2059,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2125,12 +2125,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2191,12 +2191,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "<string>"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "<string>"
+                                                                    "value": "{{integrationVersion}}"
                                                                 },
                                                                 {
                                                                     "key": "Accept",
@@ -2253,12 +2253,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2320,12 +2320,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2387,12 +2387,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2454,12 +2454,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2521,12 +2521,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2588,12 +2588,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2655,12 +2655,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2722,12 +2722,12 @@
                                                                         {
                                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                                             "key": "X-Turnitin-Integration-Name",
-                                                                            "value": "myintegration"
+                                                                            "value": "{{integrationName}}"
                                                                         },
                                                                         {
                                                                             "description": "(Required) the version of the integration platform being used",
                                                                             "key": "X-Turnitin-Integration-Version",
-                                                                            "value": "v1.0.2"
+                                                                            "value": "{{integrationVersion}}"
                                                                         }
                                                                     ],
                                                                     "url": {
@@ -2792,12 +2792,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "<string>"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "<string>"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "key": "Content-Type",
@@ -2859,12 +2859,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -2928,12 +2928,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -2997,12 +2997,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -3066,12 +3066,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -3135,12 +3135,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -3204,12 +3204,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -3273,12 +3273,12 @@
                                                                 {
                                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                                     "key": "X-Turnitin-Integration-Name",
-                                                                    "value": "myintegration"
+                                                                    "value": "{{integrationName}}"
                                                                 },
                                                                 {
                                                                     "description": "(Required) the version of the integration platform being used",
                                                                     "key": "X-Turnitin-Integration-Version",
-                                                                    "value": "v1.0.2"
+                                                                    "value": "{{integrationVersion}}"
                                                                 }
                                                             ],
                                                             "body": {
@@ -3345,12 +3345,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Accept",
@@ -3398,12 +3398,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -3457,12 +3457,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -3516,12 +3516,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -3575,12 +3575,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -3634,12 +3634,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -3693,12 +3693,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Content-Type",
@@ -3759,12 +3759,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -3827,12 +3827,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -3895,12 +3895,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -3963,12 +3963,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -4031,12 +4031,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -4105,12 +4105,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Accept",
@@ -4158,12 +4158,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4217,12 +4217,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4276,12 +4276,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4335,12 +4335,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4394,12 +4394,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Accept",
@@ -4454,12 +4454,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4519,12 +4519,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4584,12 +4584,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4649,12 +4649,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4714,12 +4714,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -4782,12 +4782,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -4834,12 +4834,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -4892,12 +4892,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -4950,12 +4950,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5008,12 +5008,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5066,12 +5066,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5124,12 +5124,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -5183,12 +5183,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5247,12 +5247,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5311,12 +5311,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5375,12 +5375,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5439,12 +5439,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -5503,12 +5503,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`. To support UTF-8 filenames, you must URL encode the header\n",
@@ -5569,12 +5569,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
@@ -5642,12 +5642,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
@@ -5715,12 +5715,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
@@ -5788,12 +5788,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
@@ -5861,12 +5861,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *Must be 'binary/octet-stream'\n",
@@ -5934,12 +5934,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -5987,12 +5987,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -6046,12 +6046,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -6105,12 +6105,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -6164,12 +6164,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -6223,12 +6223,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -6282,12 +6282,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Content-Type",
@@ -6348,12 +6348,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -6416,12 +6416,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -6484,12 +6484,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -6552,12 +6552,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -6620,12 +6620,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -6691,12 +6691,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -6749,12 +6749,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -6810,12 +6810,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -6871,12 +6871,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -6932,12 +6932,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -6993,12 +6993,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -7063,12 +7063,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -7115,12 +7115,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7173,12 +7173,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7231,12 +7231,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7289,12 +7289,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -7341,12 +7341,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7399,12 +7399,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7457,12 +7457,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -7515,12 +7515,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Content-Type",
@@ -7580,12 +7580,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -7647,12 +7647,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -7714,12 +7714,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -7784,12 +7784,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Accept",
@@ -7829,12 +7829,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -7881,12 +7881,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -7933,12 +7933,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -7985,12 +7985,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -8043,12 +8043,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -8104,12 +8104,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -8165,12 +8165,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -8238,12 +8238,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Accept",
@@ -8298,12 +8298,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -8363,12 +8363,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -8428,12 +8428,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Accept",
@@ -8488,12 +8488,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -8553,12 +8553,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "url": {
@@ -8618,12 +8618,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "key": "Content-Type",
@@ -8691,12 +8691,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -8765,12 +8765,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         }
                                                     ],
                                                     "body": {
@@ -8839,12 +8839,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "<string>"
+                                                    "value": "{{integrationVersion}}"
                                                 },
                                                 {
                                                     "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -8913,12 +8913,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -8988,12 +8988,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -9063,12 +9063,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -9138,12 +9138,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -9213,12 +9213,12 @@
                                                         {
                                                             "description": "(Required) a human readable string representing the type of integration being used",
                                                             "key": "X-Turnitin-Integration-Name",
-                                                            "value": "myintegration"
+                                                            "value": "{{integrationName}}"
                                                         },
                                                         {
                                                             "description": "(Required) the version of the integration platform being used",
                                                             "key": "X-Turnitin-Integration-Version",
-                                                            "value": "v1.0.2"
+                                                            "value": "{{integrationVersion}}"
                                                         },
                                                         {
                                                             "description": "(Required) *must include the \"filename\" parameter, e.g. `inline; filename=\"MyFile.docx\"`\n",
@@ -9291,12 +9291,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Accept",
@@ -9344,12 +9344,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -9403,12 +9403,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "url": {
@@ -9462,12 +9462,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "<string>"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "<string>"
+                                            "value": "{{integrationVersion}}"
                                         },
                                         {
                                             "key": "Content-Type",
@@ -9528,12 +9528,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -9596,12 +9596,12 @@
                                                 {
                                                     "description": "(Required) a human readable string representing the type of integration being used",
                                                     "key": "X-Turnitin-Integration-Name",
-                                                    "value": "myintegration"
+                                                    "value": "{{integrationName}}"
                                                 },
                                                 {
                                                     "description": "(Required) the version of the integration platform being used",
                                                     "key": "X-Turnitin-Integration-Version",
-                                                    "value": "v1.0.2"
+                                                    "value": "{{integrationVersion}}"
                                                 }
                                             ],
                                             "body": {
@@ -9667,12 +9667,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Accept",
@@ -9719,12 +9719,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -9777,12 +9777,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "url": {
@@ -9835,12 +9835,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "<string>"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "<string>"
+                                    "value": "{{integrationVersion}}"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -9900,12 +9900,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -9967,12 +9967,12 @@
                                         {
                                             "description": "(Required) a human readable string representing the type of integration being used",
                                             "key": "X-Turnitin-Integration-Name",
-                                            "value": "myintegration"
+                                            "value": "{{integrationName}}"
                                         },
                                         {
                                             "description": "(Required) the version of the integration platform being used",
                                             "key": "X-Turnitin-Integration-Version",
-                                            "value": "v1.0.2"
+                                            "value": "{{integrationVersion}}"
                                         }
                                     ],
                                     "body": {
@@ -10037,12 +10037,12 @@
                         {
                             "description": "(Required) a human readable string representing the type of integration being used",
                             "key": "X-Turnitin-Integration-Name",
-                            "value": "<string>"
+                            "value": "{{integrationName}}"
                         },
                         {
                             "description": "(Required) the version of the integration platform being used",
                             "key": "X-Turnitin-Integration-Version",
-                            "value": "<string>"
+                            "value": "{{integrationVersion}}"
                         },
                         {
                             "key": "Accept",
@@ -10082,12 +10082,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "myintegration"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "v1.0.2"
+                                    "value": "{{integrationVersion}}"
                                 }
                             ],
                             "url": {
@@ -10134,12 +10134,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "myintegration"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "v1.0.2"
+                                    "value": "{{integrationVersion}}"
                                 }
                             ],
                             "url": {
@@ -10186,12 +10186,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "myintegration"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "v1.0.2"
+                                    "value": "{{integrationVersion}}"
                                 }
                             ],
                             "url": {
@@ -10238,12 +10238,12 @@
                                 {
                                     "description": "(Required) a human readable string representing the type of integration being used",
                                     "key": "X-Turnitin-Integration-Name",
-                                    "value": "myintegration"
+                                    "value": "{{integrationName}}"
                                 },
                                 {
                                     "description": "(Required) the version of the integration platform being used",
                                     "key": "X-Turnitin-Integration-Version",
-                                    "value": "v1.0.2"
+                                    "value": "{{integrationVersion}}"
                                 }
                             ],
                             "url": {
@@ -10280,21 +10280,11 @@
             }
         ],
         "auth": {
-            "type": "apikey",
-            "apikey": [
+            "type": "bearer",
+            "bearer": [
                 {
-                    "key": "key",
-                    "value": "Authorization",
-                    "type": "string"
-                },
-                {
-                    "key": "value",
-                    "value": "<API Key>",
-                    "type": "string"
-                },
-                {
-                    "key": "in",
-                    "value": "header",
+                    "key": "token",
+                    "value": "{{integrationToken}}",
                     "type": "string"
                 }
             ]
@@ -10311,6 +10301,21 @@
                 "id": "9252bd6f-fcb7-4460-bd4f-4deed8992d55",
                 "key": "baseUrl",
                 "value": "https://{{tenantName}}.turnitin.com/api/v1",
+                "type": "string"
+            },
+            {
+                "key": "integrationName",
+                "value": "myintegration",
+                "type": "string"
+            },
+            {
+                "key": "integrationVersion",
+                "value": "v1.0.2",
+                "type": "string"
+            },
+            {
+                "key": "integrationToken",
+                "value": "API Key",
                 "type": "string"
             }
         ]
