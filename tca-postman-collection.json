@@ -10280,21 +10280,11 @@
             }
         ],
         "auth": {
-            "type": "apikey",
-            "apikey": [
+            "type": "bearer",
+            "bearer": [
                 {
-                    "key": "key",
-                    "value": "Authorization",
-                    "type": "string"
-                },
-                {
-                    "key": "value",
-                    "value": "<API Key>",
-                    "type": "string"
-                },
-                {
-                    "key": "in",
-                    "value": "header",
+                    "key": "token",
+                    "value": "{{integrationToken}}",
                     "type": "string"
                 }
             ]
@@ -10321,6 +10311,11 @@
             {
                 "key": "integrationVersion",
                 "value": "v1.0.2",
+                "type": "string"
+            },
+            {
+                "key": "integrationToken",
+                "value": "API Key",
                 "type": "string"
             }
         ]
